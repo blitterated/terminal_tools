@@ -10,7 +10,7 @@ CREATE TABLE tools (
 
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
-  name TEXT NOT NULL
+  name TEXT NOT NULL UNIQUE
 );
 
 CREATE TABLE tools_tags_xref (
@@ -21,7 +21,7 @@ CREATE TABLE tools_tags_xref (
 
 CREATE TABLE languages (
   id INTEGER PRIMARY KEY,
-  name TEXT NOT NULL
+  name TEXT NOT NULL UNIQUE
 );
 
 CREATE TABLE tools_languages_xref (
