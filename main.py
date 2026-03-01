@@ -15,7 +15,7 @@ def main():
     table_rows = soup.find_all("tr")
 
     for row in table_rows:
-        print(row.text)
+        print(f"Row class: {row['class']}")
 
 
 if __name__ == "__main__":
