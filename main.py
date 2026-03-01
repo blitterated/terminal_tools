@@ -14,17 +14,24 @@ def process_section_row(row):
     #print(f"cell type: {type(cell)}, name: {cell.name}, content: {cell.text}")
     return cell.text
 
+def extract_url_from_cell(cell):
+    link = cell.find('a')
+
+    if link is None:
+        return "NULL"
+
+    return f"\"{link.get('href')}\""
 
 def process_tool_row(row):
     name = row.find("td", class_="name-cell").text
-    home = row.find("td", class_="home-cell").text
-    docs = row.find("td", class_="doc-cell").text
-    repo = row.find("td", class_="repo-cell").text
-    lang = row.find("td", class_="lang-cell").text
+    home = extract_url_from_cell(row.find("td", class_="home-cell"))
+    docs = extract_url_from_cell(row.find("td", class_="doc-cell"))
+    repo = extract_url_from_cell(row.find("td", class_="repo-cell"))
+    lang = extract_url_from_cell(row.find("td", class_="lang-cell"))
     desc = row.find("td", class_="desc-cell").text
 
     tool_insert_sql_1 = "INSERT INTO tools (name, invocation, url_home, url_documentation, url_repository, description)"
-    tool_insert_sql_2 = f"VALUES (\"{name}\", \"{home}\", \"{docs}\", \"{repo}\", \"{desc}\");"
+    tool_insert_sql_2 = f"VALUES (\"{name}\", {home}, {docs}, {repo}, \"{desc}\");"
 
     print(" ".join([tool_insert_sql_1, tool_insert_sql_2]))
 
