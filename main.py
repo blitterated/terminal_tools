@@ -1,12 +1,15 @@
 from bs4 import BeautifulSoup
 
+
 def load_file_contents(file_name):
     with open(file_name, 'r', encoding='utf-8') as file:
         content = file.read()
         return content
 
+
 def soupinate(html):
     return BeautifulSoup(html, "html.parser")
+
 
 def process_section_row(row):
     #cell = row.find("td")
@@ -22,6 +25,7 @@ def extract_url_from_cell(cell):
 
     return f"\"{link.get('href')}\""
 
+
 def process_tool_row(row):
     name = row.find("td", class_="name-cell").text
     home = extract_url_from_cell(row.find("td", class_="home-cell"))
@@ -34,6 +38,7 @@ def process_tool_row(row):
     tool_insert_sql_2 = f"VALUES (\"{name}\", {home}, {docs}, {repo}, \"{desc}\");"
 
     print(" ".join([tool_insert_sql_1, tool_insert_sql_2]))
+
 
 def process_rows(table_rows):
     section_row = ""
