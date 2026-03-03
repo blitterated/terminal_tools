@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Generated database
+terminal_tools.db
