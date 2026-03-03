@@ -12,10 +12,11 @@ def soupinate(html):
 
 
 def process_section_row(row):
-    #cell = row.find("td")
     cell = row.td
-    #print(f"cell type: {type(cell)}, name: {cell.name}, content: {cell.text}")
-    return cell.text
+    section = cell.text
+    print(f"INSERT INTO tags (name) VALUES (\"{section}\") ON CONFLICT (name) DO NOTHING;")
+    return section
+
 
 def extract_url_from_cell(cell):
     link = cell.find('a')
@@ -41,16 +42,14 @@ def process_tool_row(row):
 
 
 def process_rows(table_rows):
-    section_row = ""
+    section = ""
 
     for row in table_rows:
         row_class = row['class'][0]
-        #print(f"row_class: {row_class}, type: {type(row_class)}")
 
         match row_class:
             case "section-row":
-                section_name = process_section_row(row)
-                print(f"section: {section_name}")
+                section = process_section_row(row)
 
             case "tool-row":
                 process_tool_row(row)
