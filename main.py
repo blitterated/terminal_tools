@@ -1,4 +1,16 @@
+from textwrap import dedent
 from bs4 import BeautifulSoup
+from dataclasses import dataclass
+
+@dataclass
+class TerminalTool():
+    name: str
+    invocation: str
+    url_home: str
+    url_documentation: str
+    url_repository: str
+    implementation_language: str
+    description: str
 
 
 def load_file_contents(file_name):
@@ -11,11 +23,8 @@ def soupinate(html):
     return BeautifulSoup(html, "html.parser")
 
 
-def process_section_row(row):
-    cell = row.td
-    section = cell.text
-    print(f"INSERT INTO tags (name) VALUES (\"{section}\") ON CONFLICT (name) DO NOTHING;")
-    return section
+def extract_section_name(row):
+    return row.td.text
 
 
 def extract_url_from_cell(cell):
@@ -24,21 +33,57 @@ def extract_url_from_cell(cell):
     if link is None:
         return "NULL"
 
-    return f"\"{link.get('href')}\""
+    return f"{link.get('href')}"
 
 
-def process_tool_row(row):
+def hydrate_tool(row):
     name = row.find("td", class_="name-cell").text
     home = extract_url_from_cell(row.find("td", class_="home-cell"))
     docs = extract_url_from_cell(row.find("td", class_="doc-cell"))
     repo = extract_url_from_cell(row.find("td", class_="repo-cell"))
-    lang = extract_url_from_cell(row.find("td", class_="lang-cell"))
+    lang = row.find("td", class_="lang-cell").text
     desc = row.find("td", class_="desc-cell").text
 
-    tool_insert_sql_1 = "INSERT INTO tools (name, invocation, url_home, url_documentation, url_repository, description)"
-    tool_insert_sql_2 = f"VALUES (\"{name}\", {home}, {docs}, {repo}, \"{desc}\");"
+    return TerminalTool(
+        name=name, invocation=None, url_home=home, url_documentation=docs,
+        url_repository=repo, implementation_language=lang, description=desc
+    )
 
-    print(" ".join([tool_insert_sql_1, tool_insert_sql_2]))
+
+def quotit(s):
+    if s != "NULL":
+        return f"'{s}'"
+
+    return s
+
+
+def emit_tag_insert_sql(section):
+    print(f"INSERT INTO tags (name) VALUES ({quotit(section)});")
+
+
+def emit_tool_insert_sql(tool):
+    tool_insert_sql = dedent(f"""
+        INSERT INTO tools (
+            name,
+            invocation,
+            url_home,
+            url_documentation,
+            url_repository,
+            implementation_language,
+            description
+        )
+        VALUES (
+            {quotit(tool.name)},
+            NULL,
+            {quotit(tool.url_home)},
+            {quotit(tool.url_documentation)},
+            {quotit(tool.url_repository)},
+            {quotit(tool.implementation_language)},
+            {quotit(tool.description)}
+        );
+    """)
+
+    print(tool_insert_sql)
 
 
 def process_rows(table_rows):
@@ -49,10 +94,17 @@ def process_rows(table_rows):
 
         match row_class:
             case "section-row":
-                section = process_section_row(row)
+                section = extract_section_name(row)
+                emit_tag_insert_sql(section)
 
             case "tool-row":
-                process_tool_row(row)
+                tool = hydrate_tool(row)
+                emit_tool_insert_sql(tool)
+
+                if not section:
+                    continue
+
+                #TODO: emit_tag_tool_xref_insert_sql
 
 
 def main():
@@ -61,7 +113,6 @@ def main():
 
     table_rows = soup.find_all("tr")
     process_rows(table_rows)
-
 
 
 if __name__ == "__main__":
