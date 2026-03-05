@@ -18,6 +18,7 @@ CREATE TABLE tools_tags_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
   tag_id INTEGER NOT NULL,
+  UNIQUE(tool_id, tag_id)
 );
 
 CREATE TABLE languages (
@@ -29,5 +30,6 @@ CREATE TABLE tools_languages_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
   language_id INTEGER NOT NULL,
-  percentage REAL NOT NULL
+  percentage REAL NOT NULL,
+  UNIQUE(tool_id, language_id)
 );
