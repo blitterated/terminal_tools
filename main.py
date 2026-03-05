@@ -2,6 +2,7 @@ from textwrap import dedent
 from bs4 import BeautifulSoup
 from dataclasses import dataclass
 
+
 @dataclass
 class TerminalTool():
     name: str
@@ -45,8 +46,13 @@ def hydrate_tool(row):
     desc = row.find("td", class_="desc-cell").text
 
     return TerminalTool(
-        name=name, invocation=None, url_home=home, url_documentation=docs,
-        url_repository=repo, implementation_language=lang, description=desc
+        name=name,
+        invocation=None,
+        url_home=home,
+        url_documentation=docs,
+        url_repository=repo,
+        implementation_language=lang,
+        description=desc
     )
 
 
@@ -58,7 +64,9 @@ def quotit(s):
 
 
 def emit_tag_insert_sql(section):
-    print(f"INSERT INTO tags (name) VALUES ({quotit(section)});")
+    print(dedent(f"""
+        INSERT INTO tags (name) VALUES ({quotit(section)});
+    """))
 
 
 def emit_tool_insert_sql(tool):
@@ -86,6 +94,21 @@ def emit_tool_insert_sql(tool):
     print(tool_insert_sql)
 
 
+def emit_tag_tool_xref_insert_sql(tool_name, tag_name):
+    xref_insert_sql = dedent(f"""
+        INSERT INTO tools_tags_xref (
+            tool_id,
+            tag_id
+        )
+        VALUES (
+            (SELECT id from tools WHERE name = '{tool_name}'),
+            (SELECT id from tags WHERE name = '{tag_name}')
+        );
+    """)
+
+    print(xref_insert_sql)
+
+
 def process_rows(table_rows):
     section = ""
 
@@ -104,7 +127,7 @@ def process_rows(table_rows):
                 if not section:
                     continue
 
-                #TODO: emit_tag_tool_xref_insert_sql
+                emit_tag_tool_xref_insert_sql(tool.name, section)
 
 
 def main():
