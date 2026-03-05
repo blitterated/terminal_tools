@@ -1,2 +1,4 @@
 #! /usr/bin/env bash
-uv run main.py | bat -l sql
+rm terminal_tools_data.sql
+uv run main.py > terminal_tools_data.sql
+bat terminal_tools_data.sql
