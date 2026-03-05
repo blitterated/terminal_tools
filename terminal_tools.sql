@@ -5,6 +5,7 @@ CREATE TABLE tools (
   url_home TEXT,
   url_documentation TEXT,
   url_repository TEXT,
+  implementation_language TEXT,
   description TEXT NOT NULL
 );
 
