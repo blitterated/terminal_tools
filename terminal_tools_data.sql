@@ -564,7 +564,7 @@ VALUES (
     'https://github.com/sharkdp/fd/blob/master/README.md',
     'https://github.com/sharkdp/fd',
     'Rust',
-    'A simple, fast and user-friendly alternative to 'find''
+    'A simple, fast and user-friendly alternative to ''find'''
 );
 
 

@@ -58,7 +58,8 @@ def hydrate_tool(row):
 
 def quotit(s):
     if s != "NULL":
-        return f"'{s}'"
+        s_esc = s.replace("'", "''")
+        return f"'{s_esc}'"
 
     return s
 
