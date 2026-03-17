@@ -1,7 +1,7 @@
 CREATE TABLE tools (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
-  invocation TEXT NOT NULL,
+  invocation TEXT,
   url_home TEXT,
   url_documentation TEXT,
   url_repository TEXT,
