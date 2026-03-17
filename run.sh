@@ -14,4 +14,4 @@ bat terminal_tools_data.sql
 sqlite3 terminal_tools.db ".read terminal_tools_schema.sql"
 
 # Populate tables
-#sqlite3 terminal_tools.db ".read terminal_tools_data.sql"
+sqlite3 terminal_tools.db ".read terminal_tools_data.sql"
