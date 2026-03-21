@@ -48,3 +48,30 @@ CREATE TABLE tools_languages_xref (
   percentage REAL NOT NULL,
   UNIQUE(tool_id, language_id)
 );
+
+CREATE TABLE tool_urls(
+  id INTEGER PRIMARY KEY,
+  tool_id INTEGER NOT NULL,
+  url_type_id INTEGER NOT NULL,
+  UNIQUE(tool_id, tag_id)
+);
+
+CREATE TABLE tool_url_types(
+  id INTEGER PRIMARY KEY,
+  type TEXT NOT NULL UNIQUE
+);
+
+INSERT INTO tool_url_types (type) VALUES ('Homepage');
+INSERT INTO tool_url_types (type) VALUES ('Repository');
+INSERT INTO tool_url_types (type) VALUES ('Documentation');
+
+CREATE TABLE tools_tool_urls_xref (
+  id INTEGER PRIMARY KEY,
+  tool_id INTEGER NOT NULL,
+  url_id INTEGER NOT NULL,
+  UNIQUE(tool_id, url_id)
+);
+
+
+
+
