@@ -10,7 +10,6 @@ class TerminalTool():
     url_home: str
     url_documentation: str
     url_repository: str
-    implementation_language: str
     description: str
 
 
@@ -42,7 +41,6 @@ def hydrate_tool(row):
     home = extract_url_from_cell(row.find("td", class_="home-cell"))
     docs = extract_url_from_cell(row.find("td", class_="doc-cell"))
     repo = extract_url_from_cell(row.find("td", class_="repo-cell"))
-    lang = row.find("td", class_="lang-cell").text
     desc = row.find("td", class_="desc-cell").text
 
     return TerminalTool(
@@ -51,7 +49,6 @@ def hydrate_tool(row):
         url_home=home,
         url_documentation=docs,
         url_repository=repo,
-        implementation_language=lang,
         description=desc
     )
 
@@ -78,7 +75,6 @@ def emit_tool_insert_sql(tool):
             url_home,
             url_documentation,
             url_repository,
-            implementation_language,
             description
         )
         VALUES (
@@ -87,7 +83,6 @@ def emit_tool_insert_sql(tool):
             {quotit(tool.url_home)},
             {quotit(tool.url_documentation)},
             {quotit(tool.url_repository)},
-            {quotit(tool.implementation_language)},
             {quotit(tool.description)}
         );
     """)

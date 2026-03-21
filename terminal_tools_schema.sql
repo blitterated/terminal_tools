@@ -5,7 +5,6 @@ CREATE TABLE tools (
   url_home TEXT,
   url_documentation TEXT,
   url_repository TEXT,
-  implementation_language TEXT,
   description TEXT NOT NULL
 );
 
@@ -22,10 +21,25 @@ CREATE TABLE tools_tags_xref (
   UNIQUE(tool_id, tag_id)
 );
 
-CREATE TABLE languages (
+CREATE TABLE implementation_languages (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
 );
+
+INSERT INTO implementation_languages (name) VALUES ('Other');
+INSERT INTO implementation_languages (name) VALUES ('C');
+INSERT INTO implementation_languages (name) VALUES ('C++');
+INSERT INTO implementation_languages (name) VALUES ('Go');
+INSERT INTO implementation_languages (name) VALUES ('JavaScript');
+INSERT INTO implementation_languages (name) VALUES ('Lua');
+INSERT INTO implementation_languages (name) VALUES ('Markdown');
+INSERT INTO implementation_languages (name) VALUES ('PowerShell');
+INSERT INTO implementation_languages (name) VALUES ('Python');
+INSERT INTO implementation_languages (name) VALUES ('Ruby');
+INSERT INTO implementation_languages (name) VALUES ('Rust');
+INSERT INTO implementation_languages (name) VALUES ('Shell');
+INSERT INTO implementation_languages (name) VALUES ('TypeScript');
+INSERT INTO implementation_languages (name) VALUES ('Zig');
 
 CREATE TABLE tools_languages_xref (
   id INTEGER PRIMARY KEY,
