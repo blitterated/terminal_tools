@@ -66,7 +66,7 @@ def quotit(s):
 
 def emit_tag_insert_sql(section):
     print(dedent(f"""
-        INSERT INTO tags (name) VALUES ({quotit(section)});
+        INSERT INTO tags (name, is_section) VALUES ({quotit(section)}, TRUE);
     """))
 
 

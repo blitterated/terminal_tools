@@ -359,7 +359,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('AI');
+INSERT INTO tags (name, is_section) VALUES ('AI', TRUE);
 
 
 INSERT INTO tools (
@@ -422,7 +422,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Colors');
+INSERT INTO tags (name, is_section) VALUES ('Colors', TRUE);
 
 
 INSERT INTO tools (
@@ -455,7 +455,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Disk Usage');
+INSERT INTO tags (name, is_section) VALUES ('Disk Usage', TRUE);
 
 
 INSERT INTO tools (
@@ -608,7 +608,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Documentation');
+INSERT INTO tags (name, is_section) VALUES ('Documentation', TRUE);
 
 
 INSERT INTO tools (
@@ -761,7 +761,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('File Managers');
+INSERT INTO tags (name, is_section) VALUES ('File Managers', TRUE);
 
 
 INSERT INTO tools (
@@ -794,7 +794,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('File Processors');
+INSERT INTO tags (name, is_section) VALUES ('File Processors', TRUE);
 
 
 INSERT INTO tools (
@@ -857,7 +857,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Git');
+INSERT INTO tags (name, is_section) VALUES ('Git', TRUE);
 
 
 INSERT INTO tools (
@@ -920,7 +920,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('HTTP Request and Downloaders');
+INSERT INTO tags (name, is_section) VALUES ('HTTP Request and Downloaders', TRUE);
 
 
 INSERT INTO tools (
@@ -983,7 +983,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Resource Monitors');
+INSERT INTO tags (name, is_section) VALUES ('Resource Monitors', TRUE);
 
 
 INSERT INTO tools (
@@ -1046,7 +1046,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Shell History');
+INSERT INTO tags (name, is_section) VALUES ('Shell History', TRUE);
 
 
 INSERT INTO tools (
@@ -1109,7 +1109,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Task Runners');
+INSERT INTO tags (name, is_section) VALUES ('Task Runners', TRUE);
 
 
 INSERT INTO tools (
@@ -1232,7 +1232,7 @@ VALUES (
 );
 
 
-INSERT INTO tags (name) VALUES ('Version Managers');
+INSERT INTO tags (name, is_section) VALUES ('Version Managers', TRUE);
 
 
 INSERT INTO tools (
