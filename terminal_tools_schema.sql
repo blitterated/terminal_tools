@@ -53,7 +53,7 @@ CREATE TABLE tool_urls(
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
   url_type_id INTEGER NOT NULL,
-  UNIQUE(tool_id, tag_id)
+  UNIQUE(tool_id, url_type_id)
 );
 
 CREATE TABLE tool_url_types(
