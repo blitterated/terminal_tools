@@ -71,7 +71,3 @@ CREATE TABLE tools_tool_urls_xref (
   url_id INTEGER NOT NULL,
   UNIQUE(tool_id, url_id)
 );
-
-
-
-
