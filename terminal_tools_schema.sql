@@ -2,9 +2,6 @@ CREATE TABLE tools (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   invocation TEXT,
-  url_home TEXT,
-  url_documentation TEXT,
-  url_repository TEXT,
   description TEXT NOT NULL
 );
 
@@ -49,25 +46,19 @@ CREATE TABLE tools_languages_xref (
   UNIQUE(tool_id, language_id)
 );
 
-CREATE TABLE tool_urls(
-  id INTEGER PRIMARY KEY,
-  tool_id INTEGER NOT NULL,
-  url_type_id INTEGER NOT NULL,
-  UNIQUE(tool_id, url_type_id)
-);
-
 CREATE TABLE tool_url_types(
   id INTEGER PRIMARY KEY,
   type TEXT NOT NULL UNIQUE
 );
 
+CREATE TABLE tool_urls(
+  id INTEGER PRIMARY KEY,
+  tool_id INTEGER NOT NULL,
+  url_type_id INTEGER NOT NULL,
+  url TEXT NOT NULL,
+  UNIQUE(tool_id, url_type_id)
+);
+
 INSERT INTO tool_url_types (type) VALUES ('Homepage');
 INSERT INTO tool_url_types (type) VALUES ('Repository');
 INSERT INTO tool_url_types (type) VALUES ('Documentation');
-
-CREATE TABLE tools_tool_urls_xref (
-  id INTEGER PRIMARY KEY,
-  tool_id INTEGER NOT NULL,
-  url_id INTEGER NOT NULL,
-  UNIQUE(tool_id, url_id)
-);
