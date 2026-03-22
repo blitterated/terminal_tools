@@ -5,7 +5,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -14,7 +13,6 @@ VALUES (
     NULL,
     'https://github.com/sharkdp/bat?tab=readme-ov-file#how-to-use',
     'https://github.com/sharkdp/bat',
-    'Rust',
     'A cat(1) clone with wings.'
 );
 
@@ -25,7 +23,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -34,7 +31,6 @@ VALUES (
     'https://hpjansson.org/chafa/',
     'https://hpjansson.org/chafa/man/',
     'https://github.com/hpjansson/chafa',
-    'C',
     'Terminal graphics for the 21st century.'
 );
 
@@ -45,7 +41,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -54,7 +49,6 @@ VALUES (
     'https://www.chezmoi.io/',
     'https://www.chezmoi.io/',
     'https://github.com/twpayne/chezmoi',
-    'Go',
     'Manage your dotfiles across multiple diverse machines, securely.'
 );
 
@@ -65,7 +59,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -74,7 +67,6 @@ VALUES (
     'https://cmus.github.io/',
     'https://github.com/cmus/cmus/wiki/',
     'https://github.com/cmus/cmus',
-    'C',
     'Small, fast and powerful console music player for Unix-like operating systems.'
 );
 
@@ -85,7 +77,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -94,7 +85,6 @@ VALUES (
     NULL,
     'https://github.com/YS-L/csvlens/blob/main/README.md',
     'https://github.com/YS-L/csvlens',
-    'Rust',
     'Command line csv viewer'
 );
 
@@ -105,7 +95,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -114,7 +103,6 @@ VALUES (
     'https://dandavison.github.io/delta/',
     'https://dandavison.github.io/delta/',
     'https://github.com/dandavison/delta',
-    'Rust',
     'A syntax-highlighting pager for git, diff, grep, and blame output'
 );
 
@@ -125,7 +113,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -134,7 +121,6 @@ VALUES (
     'https://eza.rocks/',
     'https://github.com/eza-community/eza',
     'https://github.com/eza-community/eza',
-    'Rust',
     'A modern alternative to ls'
 );
 
@@ -145,7 +131,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -154,7 +139,6 @@ VALUES (
     'https://fselect.rocks/',
     'https://fselect.rocks/docs/usage.html',
     'https://github.com/jhspetersson/fselect',
-    'Rust',
     'Find files with SQL-like queries'
 );
 
@@ -165,7 +149,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -174,7 +157,6 @@ VALUES (
     NULL,
     'https://github.com/sharkdp/hyperfine/blob/master/README.md',
     'https://github.com/sharkdp/hyperfine',
-    'Rust',
     'A command-line benchmarking tool'
 );
 
@@ -185,7 +167,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -194,7 +175,6 @@ VALUES (
     'https://mfontanini.github.io/presenterm/',
     'https://mfontanini.github.io/presenterm/',
     'https://github.com/mfontanini/presenterm',
-    'Rust',
     'A markdown terminal slideshow tool'
 );
 
@@ -205,7 +185,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -214,7 +193,6 @@ VALUES (
     NULL,
     'https://github.com/denispol/procguard/blob/main/docs/resource-limits.md',
     'https://github.com/denispol/procguard',
-    'Rust',
     'Process supervisor for macOS: memory limits, CPU throttling, native boosted macOS timeout.'
 );
 
@@ -225,7 +203,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -234,7 +211,6 @@ VALUES (
     'https://ranger.fm/',
     'https://ranger.fm/documentation.html',
     'https://github.com/ranger/ranger',
-    'Python',
     'A VIM-inspired filemanager for the console'
 );
 
@@ -245,7 +221,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -254,7 +229,6 @@ VALUES (
     'https://starship.rs/',
     'https://starship.rs/guide/',
     'https://github.com/starship/starship',
-    'Rust',
     'The minimal, blazing-fast, and infinitely customizable prompt for any shell!'
 );
 
@@ -265,7 +239,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -274,7 +247,6 @@ VALUES (
     NULL,
     'https://github.com/hzqtc/taproom/blob/main/README.md',
     'https://github.com/hzqtc/taproom',
-    'Go',
     'An interactive TUI for Homebrew'
 );
 
@@ -285,7 +257,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -294,7 +265,6 @@ VALUES (
     'https://uutils.github.io/coreutils/',
     'https://uutils.github.io/coreutils/docs/',
     'https://github.com/uutils/coreutils',
-    'Rust',
     'Cross-platform Rust rewrite of the GNU coreutils'
 );
 
@@ -305,7 +275,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -314,7 +283,6 @@ VALUES (
     'https://yazi-rs.github.io/',
     'https://yazi-rs.github.io/docs/installation',
     'https://github.com/sxyazi/yazi',
-    'Rust',
     'Blazing fast terminal file manager written in Rust, based on async I/O.'
 );
 
@@ -325,7 +293,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -334,7 +301,6 @@ VALUES (
     'https://zellij.dev/',
     'https://zellij.dev/documentation/',
     'https://github.com/zellij-org/zellij',
-    'Rust',
     'Terminal Workspace with Batteries Included (terminal multiplexer)'
 );
 
@@ -345,7 +311,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -354,7 +319,6 @@ VALUES (
     'https://zoxide.org/',
     'https://zoxide.org/tutorials/',
     'https://github.com/ajeetdsouza/zoxide',
-    'Rust',
     'A smarter cd command. Supports all major shells.'
 );
 
@@ -368,7 +332,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -377,7 +340,6 @@ VALUES (
     NULL,
     'https://github.com/AlexsJones/llmfit/blob/main/README.md',
     'https://github.com/AlexsJones/llmfit',
-    'Rust & Python',
     '497 models. 133 providers. One command to find what runs on your hardware.'
 );
 
@@ -398,7 +360,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -407,7 +368,6 @@ VALUES (
     NULL,
     'https://github.com/arimxyer/models/blob/main/README.md',
     'https://github.com/arimxyer/models',
-    'Rust',
     'CLI and TUI for browsing AI models, benchmarks, and coding agents.'
 );
 
@@ -431,7 +391,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -440,7 +399,6 @@ VALUES (
     NULL,
     'https://jqlang.org/manual/',
     'https://github.com/dylanaraps/pywal',
-    'Python',
     'Generate and change color-schemes on the fly.'
 );
 
@@ -464,7 +422,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -473,7 +430,6 @@ VALUES (
     'https://lib.rs/crates/dua-cli',
     'https://lib.rs/crates/dua-cli',
     'https://github.com/Byron/dua-cli',
-    'Rust',
     'View disk space usage and delete unwanted data, fast.'
 );
 
@@ -494,7 +450,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -503,7 +458,6 @@ VALUES (
     NULL,
     'https://github.com/bootandy/dust/blob/master/README.md',
     'https://github.com/bootandy/dust',
-    'Rust',
     'A more intuitive version of du in rust'
 );
 
@@ -524,7 +478,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -533,7 +486,6 @@ VALUES (
     'https://dystroy.org/dysk/',
     'https://dystroy.org/dysk/',
     'https://github.com/Canop/dysk',
-    'Rust',
     'A linux utility to get information on filesystems, like df but better'
 );
 
@@ -554,7 +506,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -563,7 +514,6 @@ VALUES (
     NULL,
     'https://github.com/sharkdp/fd/blob/master/README.md',
     'https://github.com/sharkdp/fd',
-    'Rust',
     'A simple, fast and user-friendly alternative to ''find'''
 );
 
@@ -584,16 +534,14 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
-    'ncdu',
+    'ncdu (C)',
     NULL,
     'https://dev.yorhel.nl/ncdu',
     '',
     'https://code.blicky.net/yorhel/ncdu/src/branch/master',
-    'C or Zig',
     'Ncdu (NCurses Disk Usage) is a disk usage analyzer with a text-mode user interface.'
 );
 
@@ -603,7 +551,35 @@ INSERT INTO tools_tags_xref (
     tag_id
 )
 VALUES (
-    (SELECT id from tools WHERE name = 'ncdu'),
+    (SELECT id from tools WHERE name = 'ncdu (C)'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
+);
+
+
+INSERT INTO tools (
+    name,
+    invocation,
+    url_home,
+    url_documentation,
+    url_repository,
+    description
+)
+VALUES (
+    'ncdu (Zig)',
+    NULL,
+    'https://dev.yorhel.nl/ncdu',
+    '',
+    'https://code.blicky.net/yorhel/ncdu/src/branch/zig',
+    'Ncdu (NCurses Disk Usage) is a disk usage analyzer with a text-mode user interface.'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'ncdu (Zig)'),
     (SELECT id from tags WHERE name = 'Disk Usage')
 );
 
@@ -617,7 +593,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -626,7 +601,6 @@ VALUES (
     'https://charm.land/apps/',
     'https://github.com/charmbracelet/glow/blob/master/README.md',
     'https://github.com/charmbracelet/glow',
-    'Go',
     'Render markdown on the CLI, with pizzazz!'
 );
 
@@ -647,16 +621,14 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
-    'tldr pages',
+    'tldr',
     NULL,
     'https://tldr.sh/',
-    'https://tldr.sh/tlrc/',
+    'https://github.com/tldr-pages/tldr#what-is-tldr-pages',
     'https://github.com/tldr-pages/tldr',
-    'Markdown && (Python || Rust)',
     'Collaborative cheatsheets for console commands'
 );
 
@@ -666,7 +638,7 @@ INSERT INTO tools_tags_xref (
     tag_id
 )
 VALUES (
-    (SELECT id from tools WHERE name = 'tldr pages'),
+    (SELECT id from tools WHERE name = 'tldr'),
     (SELECT id from tags WHERE name = 'Documentation')
 );
 
@@ -677,7 +649,62 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
+    description
+)
+VALUES (
+    'tldr-python-client',
+    NULL,
+    'https://pypi.org/project/tldr/',
+    'https://github.com/tldr-pages/tldr-python-client?tab=readme-ov-file#usage',
+    'https://github.com/tldr-pages/tldr-python-client',
+    'Official Python command-line client for tldr pages'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'tldr-python-client'),
+    (SELECT id from tags WHERE name = 'Documentation')
+);
+
+
+INSERT INTO tools (
+    name,
+    invocation,
+    url_home,
+    url_documentation,
+    url_repository,
+    description
+)
+VALUES (
+    'tlrc',
+    NULL,
+    'https://tldr.sh/',
+    'https://tldr.sh/tlrc/',
+    'https://github.com/tldr-pages/tlrc',
+    'Official tldr client written in Rust.'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'tlrc'),
+    (SELECT id from tags WHERE name = 'Documentation')
+);
+
+
+INSERT INTO tools (
+    name,
+    invocation,
+    url_home,
+    url_documentation,
+    url_repository,
     description
 )
 VALUES (
@@ -686,7 +713,6 @@ VALUES (
     NULL,
     'https://github.com/andreafrancia/trash-cli/blob/master/README.rst',
     'https://github.com/andreafrancia/trash-cli',
-    'Rust',
     'Command line interface to the freedesktop.org trashcan.'
 );
 
@@ -707,7 +733,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -716,7 +741,6 @@ VALUES (
     'https://github.com/Builditluc/wiki-tui',
     'https://wiki-tui.net/latest/getting-started/installation/',
     'https://github.com/Builditluc/wiki-tui',
-    'Rust',
     'A simple and easy to use Wikipedia Text User Interface'
 );
 
@@ -737,7 +761,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -746,7 +769,6 @@ VALUES (
     NULL,
     'https://github.com/filiparag/wikiman/blob/master/README.md',
     'https://github.com/filiparag/wikiman',
-    'Shell',
     'Wikiman is a universal offline documentation search engine for manual pages, tldr-pages, ArchWiki, Gentoo Wiki, DevDocs, and FreeBSD documentation'
 );
 
@@ -770,7 +792,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -779,7 +800,6 @@ VALUES (
     NULL,
     'https://github.com/dylanaraps/fff/blob/master/README.md',
     'https://github.com/dylanaraps/fff',
-    'C',
     'A simple file manager written in bash'
 );
 
@@ -803,7 +823,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -812,7 +831,6 @@ VALUES (
     'https://jqlang.org/',
     'https://jqlang.org/manual/',
     'https://github.com/jqlang/jq',
-    'C',
     'Command-line JSON processor'
 );
 
@@ -833,7 +851,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -842,7 +859,6 @@ VALUES (
     'https://mikefarah.gitbook.io/yq/',
     'https://mikefarah.gitbook.io/yq/',
     'https://github.com/mikefarah/yq',
-    'Go',
     'yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL and properties processor'
 );
 
@@ -866,7 +882,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -875,7 +890,6 @@ VALUES (
     NULL,
     'https://github.com/gitui-org/gitui/blob/master/README.md',
     'https://github.com/gitui-org/gitui',
-    'Rust',
     'Blazing fast terminal-ui for git written in rust'
 );
 
@@ -896,7 +910,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -905,7 +918,6 @@ VALUES (
     NULL,
     'https://github.com/jesseduffield/lazygit/blob/master/README.md',
     'https://github.com/jesseduffield/lazygit',
-    'Go',
     'simple terminal UI for git commands'
 );
 
@@ -929,7 +941,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -938,7 +949,6 @@ VALUES (
     NULL,
     'https://github.com/surge-downloader/Surge/tree/main/docs',
     'https://github.com/surge-downloader/Surge',
-    'Go',
     'Blazing fast TUI download manager built in Go for power users'
 );
 
@@ -959,7 +969,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -968,7 +977,6 @@ VALUES (
     NULL,
     'https://github.com/ducaale/xh/blob/master/README.md',
     'https://github.com/ducaale/xh',
-    'Rust',
     'Friendly and fast tool for sending HTTP requests'
 );
 
@@ -992,7 +1000,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1001,7 +1008,6 @@ VALUES (
     NULL,
     'https://github.com/aristocratos/btop/blob/main/README.md',
     'https://github.com/aristocratos/btop',
-    'C++ & C',
     'Resource monitor that shows usage and stats for processor, memory, disks, network and processes.'
 );
 
@@ -1022,7 +1028,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1031,7 +1036,6 @@ VALUES (
     'https://web.archive.org/web/20200119052408/https://01.org/powertop/',
     'https://github.com/fenrus75/powertop/blob/master/README.md',
     'https://github.com/fenrus75/powertop',
-    'C++',
     'PowerTOP is a Linux tool to diagnose issues with power consumption and power management.'
 );
 
@@ -1055,7 +1059,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1064,7 +1067,6 @@ VALUES (
     'https://atuin.sh/',
     'https://docs.atuin.sh/cli/',
     'https://github.com/atuinsh/atuin',
-    'Rust',
     'Sync, search and backup shell history'
 );
 
@@ -1085,7 +1087,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1094,7 +1095,6 @@ VALUES (
     NULL,
     NULL,
     'https://github.com/cantino/mcfly',
-    'Rust',
     'Fly through your shell history. Great Scott!'
 );
 
@@ -1118,7 +1118,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1127,7 +1126,6 @@ VALUES (
     'https://just.systems/',
     'https://just.systems/man/en/',
     'https://github.com/casey/just',
-    'Rust',
     'Just a command runner'
 );
 
@@ -1148,7 +1146,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1157,7 +1154,6 @@ VALUES (
     NULL,
     'https://github.com/tbillington/kondo/blob/master/README.md',
     'https://github.com/tbillington/kondo',
-    'Rust',
     'Cleans dependencies and build artifacts from your projects.'
 );
 
@@ -1178,7 +1174,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1187,7 +1182,6 @@ VALUES (
     NULL,
     'https://github.com/jacobdeichert/mask/blob/master/README.md',
     'https://github.com/jacobdeichert/mask',
-    'Rust',
     'A CLI task runner defined by a simple markdown file'
 );
 
@@ -1208,7 +1202,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1217,7 +1210,6 @@ VALUES (
     NULL,
     'https://github.com/pvolok/mprocs/blob/master/README.md',
     'https://github.com/pvolok/mprocs',
-    'Rust',
     ''
 );
 
@@ -1241,7 +1233,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1250,7 +1241,6 @@ VALUES (
     'https://asdf-vm.com/',
     'https://asdf-vm.com/guide/getting-started.html',
     'https://github.com/asdf-vm/asdf',
-    'Go & Shell',
     'Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more'
 );
 
@@ -1271,7 +1261,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1280,7 +1269,6 @@ VALUES (
     NULL,
     'https://github.com/MordechaiHadad/bob?tab=readme-ov-file#-installation',
     'https://github.com/MordechaiHadad/bob',
-    'Rust',
     'A version manager for neovim'
 );
 
@@ -1301,7 +1289,6 @@ INSERT INTO tools (
     url_home,
     url_documentation,
     url_repository,
-    implementation_language,
     description
 )
 VALUES (
@@ -1310,7 +1297,6 @@ VALUES (
     'https://mise.jdx.dev/',
     'https://mise.jdx.dev/getting-started.html',
     'https://github.com/jdx/mise',
-    'Rust & Shell',
     'dev tools, env vars, task runner (nee rtx)'
 );
 
