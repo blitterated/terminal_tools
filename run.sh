@@ -14,20 +14,20 @@ rm_ephemeral () {
   fi
 }
 
-rm_ephemeral "./terminal_tools_data.sql"
+rm_ephemeral "./generated_tools_data.sql"
 rm_ephemeral "./terminal_tools.db"
 
 echo "Generate SQL INSERTs"
-uv run main.py > terminal_tools_data.sql
+uv run main.py > generated_tools_data.sql
 
 # Display results in `bat`
-#bat terminal_tools_data.sql
+#bat generated_tools_data.sql
 
 echo "(Re)create database"
 sqlite3 terminal_tools.db ".read terminal_tools_schema.sql"
 
 echo "Populate tables"
-sqlite3 terminal_tools.db ".read terminal_tools_data.sql"
+sqlite3 terminal_tools.db ".read generated_tools_data.sql"
 
 echo "Hack in tools to languages cross refs"
 sqlite3 terminal_tools.db ".read tools_languages_xref.sql"
