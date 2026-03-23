@@ -84,7 +84,7 @@ def emit_tool_insert_sql(tool):
     print(tool_insert_sql)
 
 
-def emit_tag_tool_xref_insert_sql(tool_name, tag_name):
+def emit_tools_tags_xref_insert_sql(tool_name, tag_name):
     xref_insert_sql = dedent(f"""
         INSERT INTO tools_tags_xref (
             tool_id,
@@ -96,8 +96,20 @@ def emit_tag_tool_xref_insert_sql(tool_name, tag_name):
         );
     """)
 
+    print(xref_insert_sql)
+
+
+def process_tool_urls(tool):
+    emit_tools_tool_urls_insert_sql(tool.name, "Homepage",      tool.url_home)
+    emit_tools_tool_urls_insert_sql(tool.name, "Documentation", tool.url_documentation)
+    emit_tools_tool_urls_insert_sql(tool.name, "Repository",    tool.url_repository)
+
 
 def emit_tools_tool_urls_insert_sql(tool_name, url_typename, url):
+    # Skip missing URLs
+    if reject_field(url):
+        return
+
     xref_insert_sql = dedent(f"""
         INSERT INTO tool_urls (
             tool_id,
@@ -114,6 +126,13 @@ def emit_tools_tool_urls_insert_sql(tool_name, url_typename, url):
     print(xref_insert_sql)
 
 
+def reject_field(value):
+    if value is None or value == "NULL" or value == '':
+        return True
+
+    return False
+
+
 def process_rows(table_rows):
     section = ""
 
@@ -128,20 +147,14 @@ def process_rows(table_rows):
             case "tool-row":
                 tool = hydrate_tool(row)
                 emit_tool_insert_sql(tool)
+                process_tool_urls(tool)
 
-                if not section:
+                #Skip adding section if we haven't come across one yet.
+                if reject_field(section):
                     continue
 
-                emit_tag_tool_xref_insert_sql(tool.name, section)
+                emit_tools_tags_xref_insert_sql(tool.name, section)
 
-                if tool.url_home and tool.url_home != "NULL":
-                    emit_tools_tool_urls_insert_sql(tool.name, "Homepage", tool.url_home)
-
-                if tool.url_documentation and tool.url_documentation != "NULL":
-                    emit_tools_tool_urls_insert_sql(tool.name, "Repository", tool.url_documentation)
-
-                if tool.url_repository and tool.url_repository != "NULL":
-                    emit_tools_tool_urls_insert_sql(tool.name, "Documentation", tool.url_repository)
 
 def main():
     html = load_file_contents('terminal_tools_table.html')
