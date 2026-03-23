@@ -11,6 +11,30 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'bat'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/sharkdp/bat?tab=readme-ov-file#how-to-use'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'bat'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/sharkdp/bat'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -20,6 +44,42 @@ VALUES (
     'chafa',
     'chafa',
     'Terminal graphics for the 21st century.'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'chafa'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://hpjansson.org/chafa/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'chafa'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://hpjansson.org/chafa/man/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'chafa'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/hpjansson/chafa'
 );
 
 
@@ -35,6 +95,42 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'chezmoi'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://www.chezmoi.io/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'chezmoi'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://www.chezmoi.io/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'chezmoi'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/twpayne/chezmoi'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -44,6 +140,42 @@ VALUES (
     'cmus',
     'cmus',
     'Small, fast and powerful console music player for Unix-like operating systems.'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'cmus'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://cmus.github.io/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'cmus'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/cmus/cmus/wiki/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'cmus'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/cmus/cmus'
 );
 
 
@@ -59,6 +191,30 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'csvlens'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/YS-L/csvlens/blob/main/README.md'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'csvlens'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/YS-L/csvlens'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -68,6 +224,42 @@ VALUES (
     'delta',
     'delta',
     'A syntax-highlighting pager for git, diff, grep, and blame output'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'delta'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://dandavison.github.io/delta/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'delta'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://dandavison.github.io/delta/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'delta'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/dandavison/delta'
 );
 
 
@@ -83,6 +275,42 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'eza'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://eza.rocks/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'eza'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/eza-community/eza'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'eza'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/eza-community/eza'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -92,6 +320,42 @@ VALUES (
     'fselect',
     'fselect',
     'Find files with SQL-like queries'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'fselect'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://fselect.rocks/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'fselect'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://fselect.rocks/docs/usage.html'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'fselect'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/jhspetersson/fselect'
 );
 
 
@@ -107,6 +371,30 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'hyperfine'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/sharkdp/hyperfine/blob/master/README.md'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'hyperfine'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/sharkdp/hyperfine'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -116,6 +404,42 @@ VALUES (
     'presenterm',
     'presenterm',
     'A markdown terminal slideshow tool'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'presenterm'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://mfontanini.github.io/presenterm/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'presenterm'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://mfontanini.github.io/presenterm/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'presenterm'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/mfontanini/presenterm'
 );
 
 
@@ -131,6 +455,30 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'procguard'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/denispol/procguard/blob/main/docs/resource-limits.md'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'procguard'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/denispol/procguard'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -140,6 +488,42 @@ VALUES (
     'ranger',
     'ranger',
     'A VIM-inspired filemanager for the console'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'ranger'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://ranger.fm/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'ranger'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://ranger.fm/documentation.html'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'ranger'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/ranger/ranger'
 );
 
 
@@ -155,6 +539,42 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'Starship'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://starship.rs/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'Starship'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://starship.rs/guide/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'Starship'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/starship/starship'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -164,6 +584,30 @@ VALUES (
     'taproom',
     'taproom',
     'An interactive TUI for Homebrew'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'taproom'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/hzqtc/taproom/blob/main/README.md'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'taproom'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/hzqtc/taproom'
 );
 
 
@@ -179,6 +623,42 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'UUtils CoreUtils'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://uutils.github.io/coreutils/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'UUtils CoreUtils'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://uutils.github.io/coreutils/docs/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'UUtils CoreUtils'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/uutils/coreutils'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -188,6 +668,42 @@ VALUES (
     'yazi',
     'yazi',
     'Blazing fast terminal file manager written in Rust, based on async I/O.'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'yazi'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://yazi-rs.github.io/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'yazi'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://yazi-rs.github.io/docs/installation'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'yazi'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/sxyazi/yazi'
 );
 
 
@@ -203,6 +719,42 @@ VALUES (
 );
 
 
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'zellij'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://zellij.dev/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'zellij'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://zellij.dev/documentation/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'zellij'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/zellij-org/zellij'
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -212,6 +764,42 @@ VALUES (
     'zoxide',
     'zoxide',
     'A smarter cd command. Supports all major shells.'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'zoxide'),
+    (SELECT id from tool_url_types WHERE type = 'Homepage'),
+    'https://zoxide.org/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'zoxide'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://zoxide.org/tutorials/'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'zoxide'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    'https://github.com/ajeetdsouza/zoxide'
 );
 
 
@@ -237,7 +825,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'llmfit'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/AlexsJones/llmfit/blob/main/README.md'
 );
 
@@ -249,8 +837,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'llmfit'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/AlexsJones/llmfit'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'llmfit'),
+    (SELECT id from tags WHERE name = 'AI')
 );
 
 
@@ -273,7 +871,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'models'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/arimxyer/models/blob/main/README.md'
 );
 
@@ -285,8 +883,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'models'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/arimxyer/models'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'models'),
+    (SELECT id from tags WHERE name = 'AI')
 );
 
 
@@ -312,7 +920,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'pywal'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://jqlang.org/manual/'
 );
 
@@ -324,8 +932,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'pywal'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/dylanaraps/pywal'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'pywal'),
+    (SELECT id from tags WHERE name = 'Colors')
 );
 
 
@@ -363,7 +981,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'dua'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://lib.rs/crates/dua-cli'
 );
 
@@ -375,8 +993,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'dua'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/Byron/dua-cli'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'dua'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
 );
 
 
@@ -399,7 +1027,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'dust'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/bootandy/dust/blob/master/README.md'
 );
 
@@ -411,8 +1039,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'dust'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/bootandy/dust'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'dust'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
 );
 
 
@@ -447,7 +1085,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'dysk'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://dystroy.org/dysk/'
 );
 
@@ -459,8 +1097,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'dysk'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/Canop/dysk'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'dysk'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
 );
 
 
@@ -483,7 +1131,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'fd'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/sharkdp/fd/blob/master/README.md'
 );
 
@@ -495,11 +1143,21 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'fd'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/sharkdp/fd'
 );
 
 
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'fd'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -531,11 +1189,21 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'ncdu (C)'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://code.blicky.net/yorhel/ncdu/src/branch/master'
 );
 
 
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'ncdu (C)'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
+);
+
+
 INSERT INTO tools (
     name,
     invocation,
@@ -567,8 +1235,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'ncdu (Zig)'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://code.blicky.net/yorhel/ncdu/src/branch/zig'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'ncdu (Zig)'),
+    (SELECT id from tags WHERE name = 'Disk Usage')
 );
 
 
@@ -606,7 +1284,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'glow'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/charmbracelet/glow/blob/master/README.md'
 );
 
@@ -618,8 +1296,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'glow'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/charmbracelet/glow'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'glow'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -654,7 +1342,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'tldr'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/tldr-pages/tldr#what-is-tldr-pages'
 );
 
@@ -666,8 +1354,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'tldr'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/tldr-pages/tldr'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'tldr'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -702,7 +1400,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'tldr-python-client'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/tldr-pages/tldr-python-client?tab=readme-ov-file#usage'
 );
 
@@ -714,8 +1412,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'tldr-python-client'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/tldr-pages/tldr-python-client'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'tldr-python-client'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -750,7 +1458,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'tlrc'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://tldr.sh/tlrc/'
 );
 
@@ -762,8 +1470,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'tlrc'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/tldr-pages/tlrc'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'tlrc'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -786,7 +1504,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'trash-cli'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/andreafrancia/trash-cli/blob/master/README.rst'
 );
 
@@ -798,8 +1516,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'trash-cli'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/andreafrancia/trash-cli'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'trash-cli'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -834,7 +1562,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'wiki-tui'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://wiki-tui.net/latest/getting-started/installation/'
 );
 
@@ -846,8 +1574,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'wiki-tui'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/Builditluc/wiki-tui'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'wiki-tui'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -870,7 +1608,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'wikiman'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/filiparag/wikiman/blob/master/README.md'
 );
 
@@ -882,8 +1620,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'wikiman'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/filiparag/wikiman'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'wikiman'),
+    (SELECT id from tags WHERE name = 'Documentation')
 );
 
 
@@ -909,7 +1657,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'fff'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/dylanaraps/fff/blob/master/README.md'
 );
 
@@ -921,8 +1669,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'fff'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/dylanaraps/fff'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'fff'),
+    (SELECT id from tags WHERE name = 'File Managers')
 );
 
 
@@ -960,7 +1718,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'jq'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://jqlang.org/manual/'
 );
 
@@ -972,8 +1730,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'jq'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/jqlang/jq'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'jq'),
+    (SELECT id from tags WHERE name = 'File Processors')
 );
 
 
@@ -1008,7 +1776,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'yq'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://mikefarah.gitbook.io/yq/'
 );
 
@@ -1020,8 +1788,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'yq'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/mikefarah/yq'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'yq'),
+    (SELECT id from tags WHERE name = 'File Processors')
 );
 
 
@@ -1047,7 +1825,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'gitui'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/gitui-org/gitui/blob/master/README.md'
 );
 
@@ -1059,8 +1837,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'gitui'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/gitui-org/gitui'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'gitui'),
+    (SELECT id from tags WHERE name = 'Git')
 );
 
 
@@ -1083,7 +1871,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'lazygit'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/jesseduffield/lazygit/blob/master/README.md'
 );
 
@@ -1095,8 +1883,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'lazygit'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/jesseduffield/lazygit'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'lazygit'),
+    (SELECT id from tags WHERE name = 'Git')
 );
 
 
@@ -1122,7 +1920,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'Surge'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/surge-downloader/Surge/tree/main/docs'
 );
 
@@ -1134,8 +1932,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'Surge'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/surge-downloader/Surge'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'Surge'),
+    (SELECT id from tags WHERE name = 'HTTP Request and Downloaders')
 );
 
 
@@ -1158,7 +1966,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'xh'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/ducaale/xh/blob/master/README.md'
 );
 
@@ -1170,8 +1978,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'xh'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/ducaale/xh'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'xh'),
+    (SELECT id from tags WHERE name = 'HTTP Request and Downloaders')
 );
 
 
@@ -1197,7 +2015,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'btop'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/aristocratos/btop/blob/main/README.md'
 );
 
@@ -1209,8 +2027,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'btop'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/aristocratos/btop'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'btop'),
+    (SELECT id from tags WHERE name = 'Resource Monitors')
 );
 
 
@@ -1245,7 +2073,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'PowerTOP'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/fenrus75/powertop/blob/master/README.md'
 );
 
@@ -1257,8 +2085,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'PowerTOP'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/fenrus75/powertop'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'PowerTOP'),
+    (SELECT id from tags WHERE name = 'Resource Monitors')
 );
 
 
@@ -1296,7 +2134,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'atuin'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://docs.atuin.sh/cli/'
 );
 
@@ -1308,8 +2146,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'atuin'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/atuinsh/atuin'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'atuin'),
+    (SELECT id from tags WHERE name = 'Shell History')
 );
 
 
@@ -1332,8 +2180,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'mcfly'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/cantino/mcfly'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'mcfly'),
+    (SELECT id from tags WHERE name = 'Shell History')
 );
 
 
@@ -1371,7 +2229,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'just'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://just.systems/man/en/'
 );
 
@@ -1383,8 +2241,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'just'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/casey/just'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'just'),
+    (SELECT id from tags WHERE name = 'Task Runners')
 );
 
 
@@ -1407,7 +2275,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'kondo'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/tbillington/kondo/blob/master/README.md'
 );
 
@@ -1419,8 +2287,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'kondo'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/tbillington/kondo'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'kondo'),
+    (SELECT id from tags WHERE name = 'Task Runners')
 );
 
 
@@ -1443,7 +2321,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'mask'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/jacobdeichert/mask/blob/master/README.md'
 );
 
@@ -1455,8 +2333,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'mask'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/jacobdeichert/mask'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'mask'),
+    (SELECT id from tags WHERE name = 'Task Runners')
 );
 
 
@@ -1468,19 +2356,7 @@ INSERT INTO tools (
 VALUES (
     'mprocs',
     'mprocs',
-    ''
-);
-
-
-INSERT INTO tool_urls (
-    tool_id,
-    url_type_id,
-    url
-)
-VALUES (
-    (SELECT id from tools WHERE name = 'mprocs'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
-    'https://github.com/pvolok/mprocs/blob/master/README.md'
+    'Run multiple commands in parallel'
 );
 
 
@@ -1492,7 +2368,29 @@ INSERT INTO tool_urls (
 VALUES (
     (SELECT id from tools WHERE name = 'mprocs'),
     (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    'https://github.com/pvolok/mprocs/blob/master/README.md'
+);
+
+
+INSERT INTO tool_urls (
+    tool_id,
+    url_type_id,
+    url
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'mprocs'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/pvolok/mprocs'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'mprocs'),
+    (SELECT id from tags WHERE name = 'Task Runners')
 );
 
 
@@ -1530,7 +2428,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'asdf'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://asdf-vm.com/guide/getting-started.html'
 );
 
@@ -1542,8 +2440,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'asdf'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/asdf-vm/asdf'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'asdf'),
+    (SELECT id from tags WHERE name = 'Version Managers')
 );
 
 
@@ -1566,7 +2474,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'bob'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://github.com/MordechaiHadad/bob?tab=readme-ov-file#-installation'
 );
 
@@ -1578,8 +2486,18 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'bob'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/MordechaiHadad/bob'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'bob'),
+    (SELECT id from tags WHERE name = 'Version Managers')
 );
 
 
@@ -1614,7 +2532,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'mise'),
-    (SELECT id from tool_url_types WHERE type = 'Repository'),
+    (SELECT id from tool_url_types WHERE type = 'Documentation'),
     'https://mise.jdx.dev/getting-started.html'
 );
 
@@ -1626,7 +2544,17 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = 'mise'),
-    (SELECT id from tool_url_types WHERE type = 'Documentation'),
+    (SELECT id from tool_url_types WHERE type = 'Repository'),
     'https://github.com/jdx/mise'
+);
+
+
+INSERT INTO tools_tags_xref (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = 'mise'),
+    (SELECT id from tags WHERE name = 'Version Managers')
 );
 
