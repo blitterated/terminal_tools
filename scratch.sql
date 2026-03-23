@@ -1,4 +1,4 @@
--- Show URLs and types by tool
+-- Tools and URLs
 SELECT
     t.name as "tool"
   , ut.type as "link type"
@@ -9,7 +9,7 @@ INNER JOIN tool_url_types ut on ut.id = u.url_type_id
 ORDER BY t.name, ut.type;
 
 
--- Show implementation languages by tool
+-- Tools and Languages
 SELECT
     t.name as "tool"
   , tlx.percentage * 100 as "%"
@@ -20,15 +20,16 @@ INNER JOIN implementation_languages il on tlx.language_id = il.id
 ORDER BY t.name, tlx.percentage ;
 
 
--- Show tools by section (a.k.a tag)
+-- Tools by Section (a.k.a Tags)
 SELECT
     t.name as "tool"
-  , tg.name as "section"
+  , COALESCE(tg.name, '(default)') as "section"
 FROM tools t
 LEFT JOIN tools_tags_xref ttx on t.id = ttx.tool_id
 LEFT JOIN tags tg on ttx.tag_id = tg.id
---WHERE tg.is_section = TRUE
-ORDER BY t.name;
+WHERE tg.is_section = TRUE
+   OR tg.id IS NULL
+ORDER BY tg.name, t.name;
 
 
 
