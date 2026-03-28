@@ -32,6 +32,22 @@ WHERE tg.is_section = TRUE
 ORDER BY tg.name, t.name;
 
 
+-- Tool IDs, names, invocations, and repos
+SELECT
+    t.id as "tool id"
+  , t.name as "tool name"
+  , t.invocation as "invocation"
+  , u.url as "repository"
+FROM tools t
+INNER JOIN tool_urls u on t.id = u.tool_id
+INNER JOIN tool_url_types ut on ut.id = u.url_type_id
+WHERE ut.type = 'Repository'
+ORDER BY LOWER(t.name);
+
+
+
+
+
 
 
 
