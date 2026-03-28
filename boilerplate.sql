@@ -22,7 +22,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = ''), -- tool_id
-    (SELECT id from tool_url_types WHERE name = 'Repository'), -- url_type_id
+    (SELECT id from tool_url_types WHERE type = 'Repository'), -- url_type_id
     '' -- url
 );
 
@@ -33,7 +33,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = ''), -- tool_id
-    (SELECT id from tool_url_types WHERE name = 'Homepage'), -- url_type_id
+    (SELECT id from tool_url_types WHERE type = 'Homepage'), -- url_type_id
     '' -- url
 );
 
@@ -44,7 +44,7 @@ INSERT INTO tool_urls (
 )
 VALUES (
     (SELECT id from tools WHERE name = ''), -- tool_id
-    (SELECT id from tool_url_types WHERE name = 'Documentation'), -- url_type_id
+    (SELECT id from tool_url_types WHERE type = 'Documentation'), -- url_type_id
     '' -- url
 );
 
