@@ -58,22 +58,13 @@ ORDER BY LOWER(t.name);
 
 INSERT INTO tags (name, is_section) VALUES ('', TRUE);
 
-
 INSERT INTO tools (
     name,
     invocation,
-    url_home,
-    url_documentation,
-    url_repository,
-    implementation_language,
     description
 )
 VALUES (
-    '',
-    NULL,
-    '',
-    '',
-    '',
-    '',
-    ''
+    '', -- name
+    '', -- invocation
+    ''  -- description
 );
