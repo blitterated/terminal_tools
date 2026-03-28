@@ -58,6 +58,9 @@ INSERT INTO tools VALUES(49,'mprocs','mprocs','Run multiple commands in parallel
 INSERT INTO tools VALUES(50,'asdf','asdf','Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more');
 INSERT INTO tools VALUES(51,'bob','bob','A version manager for neovim');
 INSERT INTO tools VALUES(52,'mise','mise','dev tools, env vars, task runner (nee rtx)');
+INSERT INTO tools VALUES(53,'dutree','dutree','a tool to analyze file system usage written in Rust');
+INSERT INTO tools VALUES(54,'dirstat-rs','ds','(fastest?) disk usage cli, similar to windirstat.');
+INSERT INTO tools VALUES(55,'Parallel Disk Usage','pdu','Highly parallelized, blazing fast directory tree analyzer');
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE,
@@ -116,6 +119,9 @@ INSERT INTO tools_tags_xref VALUES(31,49,11);
 INSERT INTO tools_tags_xref VALUES(32,50,12);
 INSERT INTO tools_tags_xref VALUES(33,51,12);
 INSERT INTO tools_tags_xref VALUES(34,52,12);
+INSERT INTO tools_tags_xref VALUES(35,53,3);
+INSERT INTO tools_tags_xref VALUES(36,54,3);
+INSERT INTO tools_tags_xref VALUES(37,55,3);
 CREATE TABLE implementation_languages (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -211,6 +217,13 @@ INSERT INTO tools_languages_xref VALUES(67,30,9,1.0);
 INSERT INTO tools_languages_xref VALUES(68,31,11,0.8890000000000000124);
 INSERT INTO tools_languages_xref VALUES(69,31,12,0.03599999999999999727);
 INSERT INTO tools_languages_xref VALUES(70,31,1,0.07499999999999999723);
+INSERT INTO tools_languages_xref VALUES(71,53,11,1.0);
+INSERT INTO tools_languages_xref VALUES(72,54,11,1.0);
+INSERT INTO tools_languages_xref VALUES(73,55,11,0.8900000000000000133);
+INSERT INTO tools_languages_xref VALUES(74,55,13,0.04200000000000000261);
+INSERT INTO tools_languages_xref VALUES(75,55,12,0.04200000000000000261);
+INSERT INTO tools_languages_xref VALUES(76,55,8,0.01200000000000000024);
+INSERT INTO tools_languages_xref VALUES(77,55,1,0.01400000000000000029);
 CREATE TABLE tool_url_types(
   id INTEGER PRIMARY KEY,
   type TEXT NOT NULL UNIQUE
@@ -355,4 +368,11 @@ INSERT INTO tool_urls VALUES(127,51,2,'https://github.com/MordechaiHadad/bob');
 INSERT INTO tool_urls VALUES(128,52,1,'https://mise.jdx.dev/');
 INSERT INTO tool_urls VALUES(129,52,3,'https://mise.jdx.dev/getting-started.html');
 INSERT INTO tool_urls VALUES(130,52,2,'https://github.com/jdx/mise');
+INSERT INTO tool_urls VALUES(131,53,1,'https://github.com/nachoparker/dutree');
+INSERT INTO tool_urls VALUES(132,53,3,'https://github.com/nachoparker/dutree?tab=readme-ov-file#usage');
+INSERT INTO tool_urls VALUES(133,54,2,'https://github.com/scullionw/dirstat-rs');
+INSERT INTO tool_urls VALUES(134,54,3,'https://github.com/scullionw/dirstat-rs?tab=readme-ov-file#usage');
+INSERT INTO tool_urls VALUES(135,55,2,'https://github.com/KSXGitHub/parallel-disk-usage');
+INSERT INTO tool_urls VALUES(136,55,1,'https://crates.io/crates/parallel-disk-usage');
+INSERT INTO tool_urls VALUES(137,55,3,'https://github.com/KSXGitHub/parallel-disk-usage/blob/master/USAGE.md');
 COMMIT;
