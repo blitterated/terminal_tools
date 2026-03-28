@@ -1,18 +1,7 @@
 # I dislike this file
 .DS_Store
 
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-
-# Virtual environments
-.venv
-
-# Generated database
+# Database
 terminal_tools.db
 
 # Backup files
