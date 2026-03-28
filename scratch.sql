@@ -22,7 +22,8 @@ ORDER BY LOWER(t.name), tlx.percentage ;
 
 -- Tools by Section (a.k.a Tags)
 SELECT
-    t.name AS "tool"
+    t.id AS "id"
+  , t.name AS "tool"
   , COALESCE(tg.name, '(default)') AS "section"
 FROM tools t
 LEFT JOIN tools_tags_xref ttx on t.id = ttx.tool_id
