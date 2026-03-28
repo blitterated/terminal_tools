@@ -14,3 +14,6 @@ wheels/
 
 # Generated database
 terminal_tools.db
+
+# Backup files
+*.bak
