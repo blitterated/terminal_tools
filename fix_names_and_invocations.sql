@@ -1,0 +1,23 @@
+--SELECT 'UPDATE tools SET invocation = ''' || name || ''' where id = ' || id || ';' as "update invocation" FROM tools ORDER BY name;
+
+UPDATE tools SET invocation = 'powertop' where id = 43;
+UPDATE tools SET invocation = 'starship' where id = 13;
+UPDATE tools SET invocation = 'surge' where id = 40;
+UPDATE tools SET invocation = 'N/A' where id = 15;
+UPDATE tools SET name = 'Chafa' where id = 2;
+UPDATE tools SET name = 'GitUI' where id = 38;
+UPDATE tools SET name = 'Glow' where id = 28;
+UPDATE tools SET name = 'Kondo' where id = 47;
+UPDATE tools SET name = 'Lazygit' where id = 39;
+UPDATE tools SET name = 'McFly' where id = 45;
+UPDATE tools SET name = 'ncdu', invocation = 'ncdu' where id = 26;
+UPDATE tools SET name = 'ncdu-zig', invocation = 'ncdu' where id = 27;
+UPDATE tools SET name = 'Pywal' where id = 21;
+UPDATE tools SET invocation = 'taproom' where id = 14;
+UPDATE tools SET name = 'tldr-pages' where id = 29;
+UPDATE tools SET name = 'tldr-python-client', invocation = 'tldr' where id = 30;
+UPDATE tools SET invocation = 'tlrc', invocation = 'tldr' where id = 31;
+UPDATE tools SET invocation = 'trash-*' where id = 32;
+UPDATE tools SET name = 'Wikiman' where id = 34;
+UPDATE tools SET name = 'Yazi' where id = 16;
+UPDATE tools SET name = 'Zellij' where id = 17;

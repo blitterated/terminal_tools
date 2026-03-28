@@ -31,3 +31,6 @@ sqlite3 terminal_tools.db ".read generated_tools_data.sql"
 
 echo "Hack in tools to languages cross refs"
 sqlite3 terminal_tools.db ".read tools_languages_xref.sql"
+
+echo "Fix names and invocations"
+sqlite3 terminal_tools.db ".read fix_names_and_invocations.sql"
