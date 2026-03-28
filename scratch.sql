@@ -6,7 +6,7 @@ SELECT
 FROM tool_urls u
 INNER JOIN tools t on t.id = u.tool_id
 INNER JOIN tool_url_types ut on ut.id = u.url_type_id
-ORDER BY t.name, ut.type;
+ORDER BY LOWER(t.name), ut.type;
 
 
 -- Tools and Languages
@@ -17,7 +17,7 @@ SELECT
 FROM tools t
 INNER JOIN tools_languages_xref tlx on t.id = tlx.tool_id
 INNER JOIN implementation_languages il on tlx.language_id = il.id
-ORDER BY t.name, tlx.percentage ;
+ORDER BY LOWER(t.name), tlx.percentage ;
 
 
 -- Tools by Section (a.k.a Tags)
@@ -29,7 +29,7 @@ LEFT JOIN tools_tags_xref ttx on t.id = ttx.tool_id
 LEFT JOIN tags tg on ttx.tag_id = tg.id
 WHERE tg.is_section = TRUE
    OR tg.id IS NULL
-ORDER BY tg.name, t.name;
+ORDER BY tg.name, LOWER(t.name);
 
 
 -- Tool IDs, names, invocations, and repos
