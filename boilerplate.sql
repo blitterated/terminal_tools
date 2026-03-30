@@ -56,7 +56,7 @@ INSERT INTO tools_tags_xref (
 )
 VALUES (
     (SELECT id from tools WHERE name = ''), -- tool_id
-    (SELECT id from tags WHERE name = ''), -- tag_id
+    (SELECT id from tags WHERE name = '') -- tag_id
 );
 
 INSERT INTO tools_languages_xref (
