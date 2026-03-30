@@ -63,22 +63,21 @@ INSERT INTO tools VALUES(54,'dirstat-rs','ds','(fastest?) disk usage cli, simila
 INSERT INTO tools VALUES(55,'Parallel Disk Usage','pdu','Highly parallelized, blazing fast directory tree analyzer');
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
-  name TEXT NOT NULL UNIQUE,
-  is_section INTEGER NOT NULL DEFAULT FALSE
+  name TEXT NOT NULL UNIQUE
 );
-INSERT INTO tags VALUES(1,'AI',1);
-INSERT INTO tags VALUES(2,'Colors',1);
-INSERT INTO tags VALUES(3,'Disk Usage',1);
-INSERT INTO tags VALUES(4,'Documentation',1);
-INSERT INTO tags VALUES(5,'File Managers',1);
-INSERT INTO tags VALUES(6,'File Processors',1);
-INSERT INTO tags VALUES(7,'Git',1);
-INSERT INTO tags VALUES(8,'HTTP Request and Downloaders',1);
-INSERT INTO tags VALUES(9,'Resource Monitors',1);
-INSERT INTO tags VALUES(10,'Shell History',1);
-INSERT INTO tags VALUES(11,'Task Runners',1);
-INSERT INTO tags VALUES(12,'Version Managers',1);
-INSERT INTO tags VALUES(13,'File System Search',1);
+INSERT INTO tags VALUES(1,'AI');
+INSERT INTO tags VALUES(2,'Colors');
+INSERT INTO tags VALUES(3,'Disk Usage');
+INSERT INTO tags VALUES(4,'Documentation');
+INSERT INTO tags VALUES(5,'File Managers');
+INSERT INTO tags VALUES(6,'File Processors');
+INSERT INTO tags VALUES(7,'Git');
+INSERT INTO tags VALUES(8,'HTTP Request and Downloaders');
+INSERT INTO tags VALUES(9,'Resource Monitors');
+INSERT INTO tags VALUES(10,'Shell History');
+INSERT INTO tags VALUES(11,'Task Runners');
+INSERT INTO tags VALUES(12,'Version Managers');
+INSERT INTO tags VALUES(13,'File System Search');
 CREATE TABLE tools_tags_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
