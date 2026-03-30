@@ -44,3 +44,23 @@ INNER JOIN tool_urls u on t.id = u.tool_id
 INNER JOIN tool_url_types ut on ut.id = u.url_type_id
 WHERE ut.type = 'Repository'
 ORDER BY LOWER(t.name);
+
+
+
+
+
+
+
+CREATE TABLE tools_sections (
+  id INTEGER PRIMARY KEY,
+  tool_id INTEGER NOT NULL,
+  tag_id INTEGER NOT NULL,
+  UNIQUE(tool_id)
+);
+
+
+INSERT INTO tools_section (tool_id, tag_id)
+SELECT tool_id, tag_id FROM tools_tags_xref;
+
+
+select * from tags;

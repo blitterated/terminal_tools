@@ -374,4 +374,47 @@ INSERT INTO tool_urls VALUES(134,54,3,'https://github.com/scullionw/dirstat-rs?t
 INSERT INTO tool_urls VALUES(135,55,2,'https://github.com/KSXGitHub/parallel-disk-usage');
 INSERT INTO tool_urls VALUES(136,55,1,'https://crates.io/crates/parallel-disk-usage');
 INSERT INTO tool_urls VALUES(137,55,3,'https://github.com/KSXGitHub/parallel-disk-usage/blob/master/USAGE.md');
+CREATE TABLE tools_sections (
+  id INTEGER PRIMARY KEY,
+  tool_id INTEGER NOT NULL,
+  tag_id INTEGER NOT NULL,
+  UNIQUE(tool_id)
+);
+INSERT INTO tools_sections VALUES(1,19,1);
+INSERT INTO tools_sections VALUES(2,20,1);
+INSERT INTO tools_sections VALUES(3,21,2);
+INSERT INTO tools_sections VALUES(4,22,3);
+INSERT INTO tools_sections VALUES(5,23,3);
+INSERT INTO tools_sections VALUES(6,24,3);
+INSERT INTO tools_sections VALUES(7,25,13);
+INSERT INTO tools_sections VALUES(8,26,3);
+INSERT INTO tools_sections VALUES(9,27,3);
+INSERT INTO tools_sections VALUES(10,28,4);
+INSERT INTO tools_sections VALUES(11,29,4);
+INSERT INTO tools_sections VALUES(12,30,4);
+INSERT INTO tools_sections VALUES(13,31,4);
+INSERT INTO tools_sections VALUES(14,32,4);
+INSERT INTO tools_sections VALUES(15,33,4);
+INSERT INTO tools_sections VALUES(16,34,4);
+INSERT INTO tools_sections VALUES(17,35,5);
+INSERT INTO tools_sections VALUES(18,36,6);
+INSERT INTO tools_sections VALUES(19,37,6);
+INSERT INTO tools_sections VALUES(20,38,7);
+INSERT INTO tools_sections VALUES(21,39,7);
+INSERT INTO tools_sections VALUES(22,40,8);
+INSERT INTO tools_sections VALUES(23,41,8);
+INSERT INTO tools_sections VALUES(24,42,9);
+INSERT INTO tools_sections VALUES(25,43,9);
+INSERT INTO tools_sections VALUES(26,44,10);
+INSERT INTO tools_sections VALUES(27,45,10);
+INSERT INTO tools_sections VALUES(28,46,11);
+INSERT INTO tools_sections VALUES(29,47,11);
+INSERT INTO tools_sections VALUES(30,48,11);
+INSERT INTO tools_sections VALUES(31,49,11);
+INSERT INTO tools_sections VALUES(32,50,12);
+INSERT INTO tools_sections VALUES(33,51,12);
+INSERT INTO tools_sections VALUES(34,52,12);
+INSERT INTO tools_sections VALUES(35,53,3);
+INSERT INTO tools_sections VALUES(36,54,3);
+INSERT INTO tools_sections VALUES(37,55,3);
 COMMIT;
