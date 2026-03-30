@@ -67,7 +67,7 @@ INSERT INTO tools_languages_xref (
 VALUES (
     (SELECT id from tools WHERE name = ''), -- tool_id
     (SELECT id from implementation_languages WHERE name = ''), -- language_id
-    1.0  -- percentage
+    0.  -- percentage
 );
 
 COMMIT;
