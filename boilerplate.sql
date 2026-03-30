@@ -4,6 +4,8 @@ BEGIN TRANSACTION;
 
 INSERT INTO tags (name) VALUES ('');
 
+INSERT INTO implementation_languages (name) VALUES ('');
+
 INSERT INTO tools (
     name,
     invocation,
