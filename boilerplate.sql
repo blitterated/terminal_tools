@@ -2,7 +2,7 @@
 
 BEGIN TRANSACTION;
 
-INSERT INTO tags (name, is_section) VALUES ('', TRUE);
+INSERT INTO tags (name) VALUES ('');
 
 INSERT INTO tools (
     name,
