@@ -61,6 +61,11 @@ INSERT INTO tools VALUES(52,'mise','mise','dev tools, env vars, task runner (nee
 INSERT INTO tools VALUES(53,'dutree','dutree','a tool to analyze file system usage written in Rust');
 INSERT INTO tools VALUES(54,'dirstat-rs','ds','(fastest?) disk usage cli, similar to windirstat.');
 INSERT INTO tools VALUES(55,'Parallel Disk Usage','pdu','Highly parallelized, blazing fast directory tree analyzer');
+INSERT INTO tools VALUES(56,'doxx','doxx','Expose the contents of .docx files without leaving your terminal. Fast, safe, and smart — no Office required!');
+INSERT INTO tools VALUES(57,'hygg','hygg','Simplifying the way you read. Minimalistic Vim-like TUI document reader.');
+INSERT INTO tools VALUES(58,'ttyd','ttyd','Share your terminal over the web');
+INSERT INTO tools VALUES(59,'headscale','headscale','An open source, self-hosted implementation of the Tailscale control server');
+INSERT INTO tools VALUES(60,'pitchfork','pitchfork','Pitchfork is a CLI for managing daemons with a focus on developer experience.');
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -78,6 +83,9 @@ INSERT INTO tags VALUES(10,'Shell History');
 INSERT INTO tags VALUES(11,'Task Runners');
 INSERT INTO tags VALUES(12,'Version Managers');
 INSERT INTO tags VALUES(13,'File System Search');
+INSERT INTO tags VALUES(14,'Session Managers');
+INSERT INTO tags VALUES(15,'Networking');
+INSERT INTO tags VALUES(16,'Process Managers');
 CREATE TABLE tools_tags_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -121,6 +129,11 @@ INSERT INTO tools_tags_xref VALUES(34,52,12);
 INSERT INTO tools_tags_xref VALUES(35,53,3);
 INSERT INTO tools_tags_xref VALUES(36,54,3);
 INSERT INTO tools_tags_xref VALUES(37,55,3);
+INSERT INTO tools_tags_xref VALUES(38,56,4);
+INSERT INTO tools_tags_xref VALUES(39,57,4);
+INSERT INTO tools_tags_xref VALUES(40,58,14);
+INSERT INTO tools_tags_xref VALUES(41,59,15);
+INSERT INTO tools_tags_xref VALUES(42,60,16);
 CREATE TABLE implementation_languages (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -139,6 +152,10 @@ INSERT INTO implementation_languages VALUES(11,'Rust');
 INSERT INTO implementation_languages VALUES(12,'Shell');
 INSERT INTO implementation_languages VALUES(13,'TypeScript');
 INSERT INTO implementation_languages VALUES(14,'Zig');
+INSERT INTO implementation_languages VALUES(15,'Makefile');
+INSERT INTO implementation_languages VALUES(16,'CMake');
+INSERT INTO implementation_languages VALUES(17,'SCSS');
+INSERT INTO implementation_languages VALUES(18,'CSS');
 CREATE TABLE tools_languages_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -223,6 +240,25 @@ INSERT INTO tools_languages_xref VALUES(74,55,13,0.04200000000000000261);
 INSERT INTO tools_languages_xref VALUES(75,55,12,0.04200000000000000261);
 INSERT INTO tools_languages_xref VALUES(76,55,8,0.01200000000000000024);
 INSERT INTO tools_languages_xref VALUES(77,55,1,0.01400000000000000029);
+INSERT INTO tools_languages_xref VALUES(78,56,11,0.2869999999999999774);
+INSERT INTO tools_languages_xref VALUES(79,56,15,0.6999999999999999556);
+INSERT INTO tools_languages_xref VALUES(80,56,1,0.01299999999999999941);
+INSERT INTO tools_languages_xref VALUES(81,57,11,0.989999999999999992);
+INSERT INTO tools_languages_xref VALUES(82,57,12,0.0100000000000000002);
+INSERT INTO tools_languages_xref VALUES(83,58,2,0.5600000000000000533);
+INSERT INTO tools_languages_xref VALUES(84,58,13,0.2640000000000000124);
+INSERT INTO tools_languages_xref VALUES(85,58,12,0.06400000000000000133);
+INSERT INTO tools_languages_xref VALUES(86,58,16,0.04800000000000000099);
+INSERT INTO tools_languages_xref VALUES(87,58,5,0.04100000000000000172);
+INSERT INTO tools_languages_xref VALUES(88,58,17,0.01400000000000000029);
+INSERT INTO tools_languages_xref VALUES(89,58,1,0.08999999999999999667);
+INSERT INTO tools_languages_xref VALUES(90,59,4,0.984999999999999987);
+INSERT INTO tools_languages_xref VALUES(91,59,1,0.01499999999999999945);
+INSERT INTO tools_languages_xref VALUES(92,60,11,0.961999999999999967);
+INSERT INTO tools_languages_xref VALUES(93,60,18,0.02100000000000000131);
+INSERT INTO tools_languages_xref VALUES(94,60,12,0.01400000000000000029);
+INSERT INTO tools_languages_xref VALUES(95,60,13,0.02000000000000000041);
+INSERT INTO tools_languages_xref VALUES(96,60,1,0.0100000000000000002);
 CREATE TABLE tool_url_types(
   id INTEGER PRIMARY KEY,
   type TEXT NOT NULL UNIQUE
@@ -374,6 +410,19 @@ INSERT INTO tool_urls VALUES(134,54,3,'https://github.com/scullionw/dirstat-rs?t
 INSERT INTO tool_urls VALUES(135,55,2,'https://github.com/KSXGitHub/parallel-disk-usage');
 INSERT INTO tool_urls VALUES(136,55,1,'https://crates.io/crates/parallel-disk-usage');
 INSERT INTO tool_urls VALUES(137,55,3,'https://github.com/KSXGitHub/parallel-disk-usage/blob/master/USAGE.md');
+INSERT INTO tool_urls VALUES(138,56,2,'');
+INSERT INTO tool_urls VALUES(139,56,3,'https://github.com/bgreenwell/doxx#-usage');
+INSERT INTO tool_urls VALUES(140,57,2,'https://github.com/kruseio/hygg');
+INSERT INTO tool_urls VALUES(141,57,3,'https://github.com/kruseio/hygg/blob/main/docs/README.md');
+INSERT INTO tool_urls VALUES(142,58,2,'https://github.com/tsl0922/ttyd');
+INSERT INTO tool_urls VALUES(143,58,1,'https://tsl0922.github.io/ttyd/');
+INSERT INTO tool_urls VALUES(144,58,3,'https://tsl0922.github.io/ttyd/');
+INSERT INTO tool_urls VALUES(145,59,2,'https://github.com/juanfont/headscale');
+INSERT INTO tool_urls VALUES(146,59,1,'https://headscale.net/stable/');
+INSERT INTO tool_urls VALUES(147,59,3,'https://headscale.net/stable/');
+INSERT INTO tool_urls VALUES(148,60,2,'https://github.com/jdx/pitchfork');
+INSERT INTO tool_urls VALUES(149,60,1,'https://pitchfork.jdx.dev');
+INSERT INTO tool_urls VALUES(150,60,3,'https://pitchfork.jdx.dev/cli/');
 CREATE TABLE tools_sections (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -417,4 +466,9 @@ INSERT INTO tools_sections VALUES(34,52,12);
 INSERT INTO tools_sections VALUES(35,53,3);
 INSERT INTO tools_sections VALUES(36,54,3);
 INSERT INTO tools_sections VALUES(37,55,3);
+INSERT INTO tools_sections VALUES(38,56,4);
+INSERT INTO tools_sections VALUES(39,57,4);
+INSERT INTO tools_sections VALUES(40,58,14);
+INSERT INTO tools_sections VALUES(41,59,15);
+INSERT INTO tools_sections VALUES(42,60,16);
 COMMIT;
