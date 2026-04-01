@@ -86,6 +86,10 @@ INSERT INTO tags VALUES(13,'File System Search');
 INSERT INTO tags VALUES(14,'Session Managers');
 INSERT INTO tags VALUES(15,'Networking');
 INSERT INTO tags VALUES(16,'Process Managers');
+INSERT INTO tags VALUES(17,'ANSI Graphics Tools');
+INSERT INTO tags VALUES(18,'Dot File Managers');
+INSERT INTO tags VALUES(19,'File System Navigation');
+INSERT INTO tags VALUES(20,'Music Players');
 CREATE TABLE tools_tags_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -134,6 +138,15 @@ INSERT INTO tools_tags_xref VALUES(39,57,4);
 INSERT INTO tools_tags_xref VALUES(40,58,14);
 INSERT INTO tools_tags_xref VALUES(41,59,15);
 INSERT INTO tools_tags_xref VALUES(42,60,16);
+INSERT INTO tools_tags_xref VALUES(43,2,17);
+INSERT INTO tools_tags_xref VALUES(44,3,18);
+INSERT INTO tools_tags_xref VALUES(45,5,6);
+INSERT INTO tools_tags_xref VALUES(46,12,19);
+INSERT INTO tools_tags_xref VALUES(47,16,19);
+INSERT INTO tools_tags_xref VALUES(48,18,19);
+INSERT INTO tools_tags_xref VALUES(49,8,13);
+INSERT INTO tools_tags_xref VALUES(50,4,20);
+INSERT INTO tools_tags_xref VALUES(51,17,14);
 CREATE TABLE implementation_languages (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -471,4 +484,13 @@ INSERT INTO tools_sections VALUES(39,57,4);
 INSERT INTO tools_sections VALUES(40,58,14);
 INSERT INTO tools_sections VALUES(41,59,15);
 INSERT INTO tools_sections VALUES(42,60,16);
+INSERT INTO tools_sections VALUES(43,2,17);
+INSERT INTO tools_sections VALUES(44,3,18);
+INSERT INTO tools_sections VALUES(45,5,6);
+INSERT INTO tools_sections VALUES(46,12,19);
+INSERT INTO tools_sections VALUES(47,16,19);
+INSERT INTO tools_sections VALUES(48,18,19);
+INSERT INTO tools_sections VALUES(49,8,13);
+INSERT INTO tools_sections VALUES(50,4,20);
+INSERT INTO tools_sections VALUES(51,17,14);
 COMMIT;
