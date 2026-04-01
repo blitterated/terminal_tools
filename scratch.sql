@@ -20,15 +20,14 @@ INNER JOIN implementation_languages il on tlx.language_id = il.id
 ORDER BY LOWER(t.name), tlx.percentage ;
 
 
--- Tools by Section (a.k.a Tags)
+-- Tools by Section
 SELECT
     t.id AS "id"
   , t.name AS "tool"
   , COALESCE(tg.name, '(default)') AS "section"
 FROM tools t
-LEFT JOIN tools_tags_xref ttx on t.id = ttx.tool_id
-LEFT JOIN tags tg on ttx.tag_id = tg.id
-WHERE tg.is_section = TRUE
+LEFT JOIN tools_sections ts on t.id = ts.tool_id
+LEFT JOIN tags tg on ts.tag_id = tg.id
    OR tg.id IS NULL
 ORDER BY tg.name, LOWER(t.name);
 
@@ -44,23 +43,3 @@ INNER JOIN tool_urls u on t.id = u.tool_id
 INNER JOIN tool_url_types ut on ut.id = u.url_type_id
 WHERE ut.type = 'Repository'
 ORDER BY LOWER(t.name);
-
-
-
-
-
-
-
-CREATE TABLE tools_sections (
-  id INTEGER PRIMARY KEY,
-  tool_id INTEGER NOT NULL,
-  tag_id INTEGER NOT NULL,
-  UNIQUE(tool_id)
-);
-
-
-INSERT INTO tools_section (tool_id, tag_id)
-SELECT tool_id, tag_id FROM tools_tags_xref;
-
-
-select * from tags;
