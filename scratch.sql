@@ -29,7 +29,7 @@ SELECT
 FROM tools t
 INNER JOIN tools_languages_xref tlx ON t.id = tlx.tool_id
 INNER JOIN implementation_languages il ON tlx.language_id = il.id
-ORDER BY LOWER(t.name), tlx.percentage ;
+ORDER BY LOWER(t.name), tlx.percentage;
 
 
 -- Tools by Section
