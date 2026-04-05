@@ -42,16 +42,6 @@ LEFT JOIN tags tg ON t.section_tag_id = tg.id
 ORDER BY tg.name, LOWER(t.name);
 
 
--- Check new section_tag_id column against old section table
-SELECT
-    t.id as "tool"
-  , t.section_tag_id as "new col"
-  , ts.tag_id as "old col"
-FROM tools t
-LEFT JOIN tools_sections ts ON
-  t.id = ts.tool_id;
-
-
 -- Tool IDs, names, invocations, and repos
 SELECT
     t.id AS "tool id"
