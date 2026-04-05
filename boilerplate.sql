@@ -59,6 +59,15 @@ VALUES (
     (SELECT id from tags WHERE name = '') -- tag_id
 );
 
+INSERT INTO tools_sections (
+    tool_id,
+    tag_id
+)
+VALUES (
+    (SELECT id from tools WHERE name = ''), -- tool_id
+    (SELECT id from tags WHERE name = '') -- tag_id
+);
+
 INSERT INTO tools_languages_xref (
     tool_id,
     language_id,
