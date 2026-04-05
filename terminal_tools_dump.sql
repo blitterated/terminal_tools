@@ -66,6 +66,17 @@ INSERT INTO tools VALUES(57,'hygg','hygg','Simplifying the way you read. Minimal
 INSERT INTO tools VALUES(58,'ttyd','ttyd','Share your terminal over the web');
 INSERT INTO tools VALUES(59,'headscale','headscale','An open source, self-hosted implementation of the Tailscale control server');
 INSERT INTO tools VALUES(60,'pitchfork','pitchfork','Pitchfork is a CLI for managing daemons with a focus on developer experience.');
+INSERT INTO tools VALUES(61,'SQLite','sqlite3','Lightweight SQL database engine');
+INSERT INTO tools VALUES(62,'libSQL','libsql','libSQL is a fork of SQLite that is both Open Source, and Open Contributions.');
+INSERT INTO tools VALUES(63,'rsql','rsql','Command line SQL interface for relational databases and common data file formats');
+INSERT INTO tools VALUES(64,'rainfrog','rainfrog','a database tool for the terminal');
+INSERT INTO tools VALUES(65,'ripgrep','rg','ripgrep recursively searches directories for a regex pattern while respecting your gitignore');
+INSERT INTO tools VALUES(66,'The Silver Searcher','ag','A code-searching tool similar to ack, but faster.');
+INSERT INTO tools VALUES(67,'ack','ack','ack is a grep-like search tool optimized for source code.');
+INSERT INTO tools VALUES(68,'fzf','fzf','A command-line fuzzy finder');
+INSERT INTO tools VALUES(69,'entr','entr','Run arbitrary commands when files change');
+INSERT INTO tools VALUES(70,'uv','uv','An extremely fast Python package and project manager, written in Rust.');
+INSERT INTO tools VALUES(71,'git-filter-repo','git-filter-repo','Quickly rewrite git repository history (filter-branch replacement)');
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -90,6 +101,13 @@ INSERT INTO tags VALUES(17,'ANSI Graphics Tools');
 INSERT INTO tags VALUES(18,'Dot File Managers');
 INSERT INTO tags VALUES(19,'File System Navigation');
 INSERT INTO tags VALUES(20,'Music Players');
+INSERT INTO tags VALUES(21,'Alternative Core Utils');
+INSERT INTO tags VALUES(22,'Databases');
+INSERT INTO tags VALUES(23,'Database Clients');
+INSERT INTO tags VALUES(24,'Dev Env Managers');
+INSERT INTO tags VALUES(25,'File Search');
+INSERT INTO tags VALUES(26,'File Watchers');
+INSERT INTO tags VALUES(27,'Version Control');
 CREATE TABLE tools_tags_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -147,6 +165,17 @@ INSERT INTO tools_tags_xref VALUES(48,18,19);
 INSERT INTO tools_tags_xref VALUES(49,8,13);
 INSERT INTO tools_tags_xref VALUES(50,4,20);
 INSERT INTO tools_tags_xref VALUES(51,17,14);
+INSERT INTO tools_tags_xref VALUES(52,61,22);
+INSERT INTO tools_tags_xref VALUES(53,62,22);
+INSERT INTO tools_tags_xref VALUES(54,63,23);
+INSERT INTO tools_tags_xref VALUES(55,64,23);
+INSERT INTO tools_tags_xref VALUES(56,65,25);
+INSERT INTO tools_tags_xref VALUES(57,66,25);
+INSERT INTO tools_tags_xref VALUES(58,67,25);
+INSERT INTO tools_tags_xref VALUES(59,68,25);
+INSERT INTO tools_tags_xref VALUES(60,69,26);
+INSERT INTO tools_tags_xref VALUES(61,70,24);
+INSERT INTO tools_tags_xref VALUES(62,71,27);
 CREATE TABLE implementation_languages (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -169,6 +198,9 @@ INSERT INTO implementation_languages VALUES(15,'Makefile');
 INSERT INTO implementation_languages VALUES(16,'CMake');
 INSERT INTO implementation_languages VALUES(17,'SCSS');
 INSERT INTO implementation_languages VALUES(18,'CSS');
+INSERT INTO implementation_languages VALUES(19,'Java');
+INSERT INTO implementation_languages VALUES(20,'Perl');
+INSERT INTO implementation_languages VALUES(21,'Tcl');
 CREATE TABLE tools_languages_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -272,6 +304,41 @@ INSERT INTO tools_languages_xref VALUES(93,60,18,0.02100000000000000131);
 INSERT INTO tools_languages_xref VALUES(94,60,12,0.01400000000000000029);
 INSERT INTO tools_languages_xref VALUES(95,60,13,0.02000000000000000041);
 INSERT INTO tools_languages_xref VALUES(96,60,1,0.0100000000000000002);
+INSERT INTO tools_languages_xref VALUES(97,61,2,1.0);
+INSERT INTO tools_languages_xref VALUES(98,62,2,0.857999999999999985);
+INSERT INTO tools_languages_xref VALUES(99,62,11,0.06900000000000000578);
+INSERT INTO tools_languages_xref VALUES(100,62,21,0.01799999999999999863);
+INSERT INTO tools_languages_xref VALUES(101,62,5,0.01499999999999999945);
+INSERT INTO tools_languages_xref VALUES(102,62,19,0.01200000000000000024);
+INSERT INTO tools_languages_xref VALUES(103,62,12,0.01200000000000000024);
+INSERT INTO tools_languages_xref VALUES(104,62,1,0.01600000000000000033);
+INSERT INTO tools_languages_xref VALUES(105,63,11,0.997999999999999999);
+INSERT INTO tools_languages_xref VALUES(106,63,12,0.02000000000000000041);
+INSERT INTO tools_languages_xref VALUES(107,64,11,0.9140000000000000346);
+INSERT INTO tools_languages_xref VALUES(108,64,1,0.08599999999999999311);
+INSERT INTO tools_languages_xref VALUES(109,65,11,0.945999999999999953);
+INSERT INTO tools_languages_xref VALUES(110,65,9,0.02599999999999999881);
+INSERT INTO tools_languages_xref VALUES(111,65,12,0.02100000000000000131);
+INSERT INTO tools_languages_xref VALUES(112,65,1,0.07000000000000000667);
+INSERT INTO tools_languages_xref VALUES(113,66,2,0.8810000000000000053);
+INSERT INTO tools_languages_xref VALUES(114,66,20,0.0960000000000000019);
+INSERT INTO tools_languages_xref VALUES(115,66,1,0.05999999999999999778);
+INSERT INTO tools_languages_xref VALUES(116,66,12,0.03300000000000000155);
+INSERT INTO tools_languages_xref VALUES(117,67,20,0.969999999999999974);
+INSERT INTO tools_languages_xref VALUES(118,67,1,0.03300000000000000155);
+INSERT INTO tools_languages_xref VALUES(119,68,4,0.6630000000000000337);
+INSERT INTO tools_languages_xref VALUES(120,68,10,0.2079999999999999905);
+INSERT INTO tools_languages_xref VALUES(121,68,12,0.08300000000000000432);
+INSERT INTO tools_languages_xref VALUES(122,68,1,0.04599999999999999923);
+INSERT INTO tools_languages_xref VALUES(123,69,2,0.6199999999999999956);
+INSERT INTO tools_languages_xref VALUES(124,69,12,0.2899999999999999801);
+INSERT INTO tools_languages_xref VALUES(125,69,1,0.08999999999999999667);
+INSERT INTO tools_languages_xref VALUES(126,70,11,0.980999999999999984);
+INSERT INTO tools_languages_xref VALUES(127,70,9,0.01700000000000000122);
+INSERT INTO tools_languages_xref VALUES(128,70,12,0.02000000000000000041);
+INSERT INTO tools_languages_xref VALUES(129,71,9,0.6380000000000000115);
+INSERT INTO tools_languages_xref VALUES(130,71,12,0.348999999999999977);
+INSERT INTO tools_languages_xref VALUES(131,71,15,0.01299999999999999941);
 CREATE TABLE tool_url_types(
   id INTEGER PRIMARY KEY,
   type TEXT NOT NULL UNIQUE
@@ -436,6 +503,36 @@ INSERT INTO tool_urls VALUES(147,59,3,'https://headscale.net/stable/');
 INSERT INTO tool_urls VALUES(148,60,2,'https://github.com/jdx/pitchfork');
 INSERT INTO tool_urls VALUES(149,60,1,'https://pitchfork.jdx.dev');
 INSERT INTO tool_urls VALUES(150,60,3,'https://pitchfork.jdx.dev/cli/');
+INSERT INTO tool_urls VALUES(151,61,2,'https://sqlite.org/src/dir?ci=trunk');
+INSERT INTO tool_urls VALUES(152,61,1,'https://sqlite.org/index.html');
+INSERT INTO tool_urls VALUES(153,61,3,'https://sqlite.org/docs.html');
+INSERT INTO tool_urls VALUES(154,62,2,'https://github.com/tursodatabase/libsql');
+INSERT INTO tool_urls VALUES(155,62,1,'https://turso.tech/');
+INSERT INTO tool_urls VALUES(156,62,3,'https://docs.turso.tech/introduction');
+INSERT INTO tool_urls VALUES(157,63,2,'https://github.com/theseus-rs/rsql');
+INSERT INTO tool_urls VALUES(158,63,1,'https://theseus-rs.github.io/rsql/rsql_cli/');
+INSERT INTO tool_urls VALUES(159,63,3,'https://theseus-rs.github.io/rsql/rsql_cli/book/');
+INSERT INTO tool_urls VALUES(160,64,2,'https://github.com/achristmascarl/rainfrog');
+INSERT INTO tool_urls VALUES(161,64,3,'https://github.com/achristmascarl/rainfrog?tab=readme-ov-file#usage');
+INSERT INTO tool_urls VALUES(162,65,2,'https://github.com/BurntSushi/ripgrep');
+INSERT INTO tool_urls VALUES(163,65,1,'https://ripgrep.dev/');
+INSERT INTO tool_urls VALUES(164,65,3,'https://ripgrep.dev/docs/');
+INSERT INTO tool_urls VALUES(165,66,2,'https://github.com/ggreer/the_silver_searcher');
+INSERT INTO tool_urls VALUES(166,66,1,'https://geoff.greer.fm/ag/');
+INSERT INTO tool_urls VALUES(167,66,3,'https://github.com/ggreer/the_silver_searcher/blob/master/doc/ag.1.md');
+INSERT INTO tool_urls VALUES(168,67,2,'https://github.com/beyondgrep/ack3');
+INSERT INTO tool_urls VALUES(169,67,1,'https://beyondgrep.com/');
+INSERT INTO tool_urls VALUES(170,67,3,'https://beyondgrep.com/documentation/');
+INSERT INTO tool_urls VALUES(171,68,2,'https://github.com/junegunn/fzf');
+INSERT INTO tool_urls VALUES(172,68,1,'https://junegunn.github.io/fzf/');
+INSERT INTO tool_urls VALUES(173,68,3,'https://junegunn.github.io/fzf/');
+INSERT INTO tool_urls VALUES(174,69,2,'https://github.com/eradman/entr');
+INSERT INTO tool_urls VALUES(175,69,3,'https://eradman.com/entrproject/');
+INSERT INTO tool_urls VALUES(176,70,2,'https://github.com/astral-sh/uv');
+INSERT INTO tool_urls VALUES(177,70,1,'https://docs.astral.sh/uv/');
+INSERT INTO tool_urls VALUES(178,70,3,'https://docs.astral.sh/uv/guides/');
+INSERT INTO tool_urls VALUES(179,71,2,'https://github.com/newren/git-filter-repo');
+INSERT INTO tool_urls VALUES(180,71,3,'https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html');
 CREATE TABLE tools_sections (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -493,4 +590,15 @@ INSERT INTO tools_sections VALUES(48,18,19);
 INSERT INTO tools_sections VALUES(49,8,13);
 INSERT INTO tools_sections VALUES(50,4,20);
 INSERT INTO tools_sections VALUES(51,17,14);
+INSERT INTO tools_sections VALUES(52,61,22);
+INSERT INTO tools_sections VALUES(53,62,22);
+INSERT INTO tools_sections VALUES(54,63,23);
+INSERT INTO tools_sections VALUES(55,64,23);
+INSERT INTO tools_sections VALUES(56,65,25);
+INSERT INTO tools_sections VALUES(57,66,25);
+INSERT INTO tools_sections VALUES(58,67,25);
+INSERT INTO tools_sections VALUES(59,68,25);
+INSERT INTO tools_sections VALUES(60,69,26);
+INSERT INTO tools_sections VALUES(61,70,24);
+INSERT INTO tools_sections VALUES(62,71,27);
 COMMIT;
