@@ -9,12 +9,14 @@ INSERT INTO implementation_languages (name) VALUES ('');
 INSERT INTO tools (
     name,
     invocation,
-    description
+    description,
+    section_tag_id
 )
 VALUES (
     '', -- name
     '', -- invocation
     ''  -- description
+    (SELECT id from tags WHERE name = '') -- section (tag_id)
 );
 
 INSERT INTO tool_urls (
@@ -51,15 +53,6 @@ VALUES (
 );
 
 INSERT INTO tools_tags_xref (
-    tool_id,
-    tag_id
-)
-VALUES (
-    (SELECT id from tools WHERE name = ''), -- tool_id
-    (SELECT id from tags WHERE name = '') -- tag_id
-);
-
-INSERT INTO tools_sections (
     tool_id,
     tag_id
 )
