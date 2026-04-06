@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 dump_filename="terminal_tools_dump.sql"
-backup_filename="${dumpfile}.bak"
+backup_filename="${dump_filename}.bak"
 
 # Delete old backup
 if [ -f "${backup_filename}" ]; then
