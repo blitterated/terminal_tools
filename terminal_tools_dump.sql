@@ -77,6 +77,9 @@ INSERT INTO tools VALUES(68,'fzf','fzf','A command-line fuzzy finder',25);
 INSERT INTO tools VALUES(69,'entr','entr','Run arbitrary commands when files change',26);
 INSERT INTO tools VALUES(70,'uv','uv','An extremely fast Python package and project manager, written in Rust.',24);
 INSERT INTO tools VALUES(71,'git-filter-repo','git-filter-repo','Quickly rewrite git repository history (filter-branch replacement)',27);
+INSERT INTO tools VALUES(72,'FIGlet','figlet','FIGlet is a program for making large letters out of ordinary text',28);
+INSERT INTO tools VALUES(73,'TOIlet','toilet','The Other Implementation of figLET',28);
+INSERT INTO tools VALUES(74,'No More Secrets','nms','A command line tool that recreates the famous data decryption effect seen in the 1992 movie Sneakers.',28);
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -108,6 +111,7 @@ INSERT INTO tags VALUES(24,'Dev Env Managers');
 INSERT INTO tags VALUES(25,'File Search');
 INSERT INTO tags VALUES(26,'File Watchers');
 INSERT INTO tags VALUES(27,'Version Control');
+INSERT INTO tags VALUES(28,'Novelty');
 CREATE TABLE tools_tags_xref (
   id INTEGER PRIMARY KEY,
   tool_id INTEGER NOT NULL,
@@ -176,6 +180,9 @@ INSERT INTO tools_tags_xref VALUES(59,68,25);
 INSERT INTO tools_tags_xref VALUES(60,69,26);
 INSERT INTO tools_tags_xref VALUES(61,70,24);
 INSERT INTO tools_tags_xref VALUES(62,71,27);
+INSERT INTO tools_tags_xref VALUES(63,72,28);
+INSERT INTO tools_tags_xref VALUES(64,73,28);
+INSERT INTO tools_tags_xref VALUES(65,74,28);
 CREATE TABLE implementation_languages (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
@@ -339,6 +346,17 @@ INSERT INTO tools_languages_xref VALUES(128,70,12,0.02000000000000000041);
 INSERT INTO tools_languages_xref VALUES(129,71,9,0.6380000000000000115);
 INSERT INTO tools_languages_xref VALUES(130,71,12,0.348999999999999977);
 INSERT INTO tools_languages_xref VALUES(131,71,15,0.01299999999999999941);
+INSERT INTO tools_languages_xref VALUES(132,72,2,0.8229999999999999539);
+INSERT INTO tools_languages_xref VALUES(133,72,1,0.1310000000000000053);
+INSERT INTO tools_languages_xref VALUES(134,72,12,0.02800000000000000058);
+INSERT INTO tools_languages_xref VALUES(135,72,15,0.01799999999999999863);
+INSERT INTO tools_languages_xref VALUES(136,73,2,0.7269999999999999796);
+INSERT INTO tools_languages_xref VALUES(137,73,12,0.1459999999999999909);
+INSERT INTO tools_languages_xref VALUES(138,73,15,0.07499999999999999723);
+INSERT INTO tools_languages_xref VALUES(139,73,1,0.05199999999999999762);
+INSERT INTO tools_languages_xref VALUES(140,74,2,0.9070000000000000284);
+INSERT INTO tools_languages_xref VALUES(141,74,1,0.05500000000000000027);
+INSERT INTO tools_languages_xref VALUES(142,74,15,0.03799999999999999906);
 CREATE TABLE tool_url_types(
   id INTEGER PRIMARY KEY,
   type TEXT NOT NULL UNIQUE
@@ -533,4 +551,12 @@ INSERT INTO tool_urls VALUES(177,70,1,'https://docs.astral.sh/uv/');
 INSERT INTO tool_urls VALUES(178,70,3,'https://docs.astral.sh/uv/guides/');
 INSERT INTO tool_urls VALUES(179,71,2,'https://github.com/newren/git-filter-repo');
 INSERT INTO tool_urls VALUES(180,71,3,'https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html');
+INSERT INTO tool_urls VALUES(181,72,2,'https://github.com/cmatsuoka/figlet');
+INSERT INTO tool_urls VALUES(182,72,1,'https://www.figlet.org/');
+INSERT INTO tool_urls VALUES(183,72,3,'https://www.figlet.org/figlet-man.html');
+INSERT INTO tool_urls VALUES(184,73,2,'https://github.com/cacalabs/toilet');
+INSERT INTO tool_urls VALUES(185,73,1,'http://caca.zoy.org/wiki/toilet');
+INSERT INTO tool_urls VALUES(186,73,3,'https://linuxcommandlibrary.com/man/toilet');
+INSERT INTO tool_urls VALUES(187,74,2,'https://github.com/bartobri/no-more-secrets');
+INSERT INTO tool_urls VALUES(188,74,3,'https://github.com/bartobri/no-more-secrets?tab=readme-ov-file#usage');
 COMMIT;
