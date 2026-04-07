@@ -15,7 +15,7 @@ INSERT INTO tools (
 VALUES (
     '', -- name
     '', -- invocation
-    ''  -- description
+    '', -- description
     (SELECT id from tags WHERE name = '') -- section (tag_id)
 );
 
