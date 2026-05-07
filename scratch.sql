@@ -57,8 +57,8 @@ ORDER BY LOWER(t.name);
 
 -- List sections alphabetically
 SELECT DISTINCT tg.name
-FROM tags tg
-INNER JOIN tools_sections ts ON tg.id = ts.tool_id 
+FROM tools t
+INNER JOIN tags tg ON tg.id = t.section_tag_id
 ORDER BY LOWER(tg.name);
 
 
